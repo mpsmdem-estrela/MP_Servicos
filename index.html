@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michell Patrick — Síndico Profissional em Manaus | MP Serviços</title>
+<meta name="description" content="Síndico profissional com mais de 20 anos em gestão financeira, controladoria e auditoria. Governança, compliance e transparência para o seu condomínio. Manaus/AM.">
+
+<meta property="og:title" content="Michell Patrick — Síndico Profissional | MP Serviços">
+<meta property="og:description" content="Gestão condominial com método, rigor financeiro e visão de longo prazo. Do diagnóstico à contabilização.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mpsmdem-estrela.github.io/portfolio/">
+<meta property="og:image" content="https://mpsmdem-estrela.github.io/portfolio/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Michell Patrick — Síndico Profissional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="MP Serviços — Síndico Profissional">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michell Patrick — Síndico Profissional | MP Serviços">
+<meta name="twitter:description" content="Gestão condominial com método, rigor financeiro e visão de longo prazo. Do diagnóstico à contabilização.">
+<meta name="twitter:image" content="https://mpsmdem-estrela.github.io/portfolio/og-image.jpg">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0F2233">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Biblioteca de Ícones Phosphor -->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web" />
+
+<style>
+:root {
+  --azul-institucional: #0F2233;
+  --azul-tecnico: #2E5A88;
+  --azul-medio: #1F3F5B;
+  --azul-claro: #4F7FB3;
+  --cinza-metalico: #9AA3A8;
+  --cinza-claro: #F4F6F8;
+  --branco: #FFFFFF;
+  --borda: rgba(46, 90, 136, 0.3);
+  --vermelho: #E74C3C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--azul-institucional);
+  color: var(--cinza-claro);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 34, 51, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--borda);
+  z-index: 1000;
+  padding: 14px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-halo {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-halo::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  background: radial-gradient(circle, rgba(79, 127, 179, 0.55) 0%, rgba(79, 127, 179, 0.18) 45%, transparent 75%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.logo-halo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 8px rgba(79, 127, 179, 0.6)) brightness(1.1);
+}
+
+.logo-fallback {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--branco);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-name { font-weight: 700; font-size: 16px; color: var(--branco); }
+.brand-product { font-size: 11px; color: var(--azul-claro); font-weight: 600; letter-spacing: 1.5px; }
+
+nav ul { display: flex; gap: 24px; list-style: none; }
+nav a { color: var(--cinza-claro); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: var(--azul-claro); }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 160px 0 100px;
+  background: linear-gradient(180deg, var(--azul-institucional) 0%, var(--azul-medio) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(46, 90, 136, 0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--azul-claro);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  background: rgba(46, 90, 136, 0.15);
+}
+
+.hero h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--branco);
+  letter-spacing: -1.2px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--cinza-metalico);
+  max-width: 720px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary { background: var(--azul-tecnico); color: var(--branco); }
+.btn-primary:hover {
+  background: var(--azul-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 127, 179, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--cinza-claro);
+  border: 1px solid var(--borda);
+}
+.btn-secondary:hover { border-color: var(--azul-claro); color: var(--branco); }
+
+.btn-demo-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border: 1px solid var(--azul-claro);
+  background: rgba(46, 90, 136, 0.2);
+  color: var(--branco);
+}
+.btn-demo-hero:hover {
+  border-color: var(--branco);
+  background: rgba(46, 90, 136, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ===== SEÇÕES ===== */
+section { padding: 80px 0; }
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--branco);
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--cinza-metalico);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+  line-height: 1.7;
+}
+
+/* ===== SOBRE ===== */
+.sobre { background: var(--azul-institucional); }
+.sobre-content {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: var(--cinza-metalico);
+  line-height: 1.8;
+}
+.sobre-content p { margin-bottom: 20px; }
+.sobre-content strong { color: var(--branco); }
+.sobre-credenciais {
+  margin-top: 32px;
+  padding: 24px;
+  background: rgba(46, 90, 136, 0.15);
+  border-radius: 8px;
+  border-left: 3px solid var(--azul-claro);
+  font-size: 14px;
+  color: var(--cinza-claro);
+  line-height: 1.7;
+}
+
+/* ===== PROBLEMA / SINAIS DE ALERTA ===== */
+.problema { background: var(--azul-medio); }
+.problema-list { list-style: none; max-width: 820px; margin: 0 auto; }
+.problema-list li {
+  padding: 16px 20px;
+  background: rgba(15, 34, 51, 0.6);
+  border-left: 3px solid var(--vermelho);
+  margin-bottom: 12px;
+  border-radius: 6px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 15px;
+}
+.problema-list li span.icon {
+  color: var(--vermelho);
+  flex-shrink: 0;
+  font-size: 24px; /* Tamanho ajustado para os ícones */
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px; /* Alinha o ícone com a primeira linha do texto */
+}
+.problema-fechamento {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--branco);
+  padding: 24px;
+  background: rgba(46, 90, 136, 0.2);
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== COMO FUNCIONA / MÉTODO ===== */
+.passos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.passo-card {
+  background: var(--azul-medio);
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.passo-card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
+.passo-numero {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--azul-claro);
+  margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+.passo-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--branco); font-weight: 700; }
+.passo-card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+.fluxo {
+  margin-top: 48px;
+  padding: 24px;
+  background: rgba(46, 90, 136, 0.15);
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  text-align: center;
+  font-size: 13px;
+  color: var(--cinza-claro);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* ===== FUNCIONALIDADES / FERRAMENTAS ===== */
+.funcionalidades { background: var(--azul-medio); }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.card {
+  background: var(--azul-institucional);
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
+.card-icon {
+  font-size: 26px;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--azul-claro);
+  font-weight: 700;
+}
+.card h3 { font-size: 16px; margin-bottom: 10px; color: var(--branco); font-weight: 700; }
+.card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+/* ===== PARA QUEM ===== */
+.para-quem-content { max-width: 820px; margin: 0 auto; text-align: center; }
+.para-quem-content > p {
+  font-size: 17px;
+  color: var(--cinza-metalico);
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.lista-publico {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.lista-publico li {
+  padding: 16px 20px;
+  background: var(--azul-medio);
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cinza-claro);
+  text-align: left;
+  transition: border-color 0.2s;
+}
+.lista-publico li:hover { border-color: var(--azul-claro); }
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais { background: var(--azul-medio); }
+.diferenciais-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.diferencial-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--azul-institucional);
+  border-radius: 10px;
+  border-left: 3px solid var(--azul-claro);
+  transition: transform 0.2s;
+}
+.diferencial-item:hover { transform: translateX(4px); }
+.diferencial-numero {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--azul-claro);
+  flex-shrink: 0;
+  min-width: 36px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 2px;
+}
+.diferencial-item h3 { font-size: 16px; margin-bottom: 6px; color: var(--branco); font-weight: 700; }
+.diferencial-item p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+/* ===== DEPOIMENTOS ===== */
+.depoimentos { background: var(--azul-institucional); }
+.depoimentos-placeholder {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  text-align: center;
+  background: var(--azul-medio);
+  border-radius: 12px;
+  border: 1px dashed var(--azul-claro);
+}
+.depoimentos-placeholder .icon-placeholder {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+  color: var(--azul-claro);
+  opacity: 0.6;
+}
+.depoimentos-placeholder h3 {
+  font-size: 20px;
+  color: var(--branco);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.depoimentos-placeholder p {
+  font-size: 15px;
+  color: var(--cinza-metalico);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===== FAQ ===== */
+.faq { background: var(--azul-medio); }
+.faq-list {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--azul-institucional);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.faq-item:hover { border-color: var(--azul-claro); }
+.faq-item summary {
+  cursor: pointer;
+  padding: 20px 56px 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--branco);
+  list-style: none;
+  position: relative;
+  transition: color 0.2s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--azul-claro);
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item[open] summary { color: var(--azul-claro); }
+.faq-item .faq-resposta {
+  padding: 0 24px 20px;
+  font-size: 14px;
+  color: var(--cinza-metalico);
+  line-height: 1.7;
+}
+.faq-item .faq-resposta p { margin-bottom: 10px; }
+.faq-item .faq-resposta p:last-child { margin-bottom: 0; }
+.faq-item .faq-resposta strong { color: var(--cinza-claro); }
+
+/* ===== CTA DEMONSTRAÇÃO ===== */
+.cta-demo {
+  background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-tecnico) 100%);
+  text-align: center;
+}
+.cta-demo h2 {
+  font-size: 32px;
+  color: var(--branco);
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.cta-demo p {
+  font-size: 17px;
+  color: rgba(244, 246, 248, 0.85);
+  max-width: 640px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.cta-demo .btn-demo-hero {
+  background: var(--branco);
+  color: var(--azul-institucional);
+  border: 2px solid var(--branco);
+  font-size: 16px;
+  padding: 18px 40px;
+}
+.cta-demo .btn-demo-hero:hover {
+  background: var(--azul-claro);
+  border-color: var(--azul-claro);
+  color: var(--branco);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== CONTATO ===== */
+.contato-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contato-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cinza-claro);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--azul-medio);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  color: var(--branco);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(79, 127, 179, 0.2);
+}
+.contato-form textarea { resize: vertical; min-height: 140px; }
+.contato-form button {
+  padding: 16px 32px;
+  background: var(--azul-tecnico);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.contato-form button:hover {
+  background: var(--azul-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 127, 179, 0.35);
+}
+.form-obrigatorio {
+  font-size: 13px;
+  color: var(--cinza-metalico);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background: var(--azul-institucional);
+  border-top: 1px solid var(--borda);
+  padding: 48px 0 32px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand .logo-halo { width: 42px; height: 42px; }
+.footer-brand-text { display: flex; flex-direction: column; }
+.footer-brand-name { font-weight: 700; font-size: 15px; color: var(--branco); }
+.footer-brand-tag { font-size: 12px; color: var(--cinza-metalico); }
+.footer-contato { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.footer-contato a { color: var(--cinza-metalico); text-decoration: none; transition: color 0.2s; }
+.footer-contato a:hover { color: var(--azul-claro); }
+.footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+.footer-links a {
+  color: var(--cinza-metalico);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--azul-claro); }
+.footer-bottom {
+  border-top: 1px solid var(--borda);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--cinza-metalico);
+}
+.footer-bottom p { margin-bottom: 4px; }
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+}
+.whatsapp-float svg { width: 32px; height: 32px; fill: var(--branco); }
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  nav ul { display: none; }
+  .hero h1 { font-size: 38px; }
+  .passos { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .lista-publico { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; align-items: flex-start; }
+  .section-title { font-size: 28px; }
+  .cta-demo h2 { font-size: 26px; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 130px 0 60px; }
+  .hero h1 { font-size: 30px; letter-spacing: -0.5px; }
+  .hero p { font-size: 15px; }
+  .section-title { font-size: 24px; }
+  .section-subtitle { font-size: 15px; margin-bottom: 40px; }
+  section { padding: 56px 0; }
+  .btn, .btn-demo-hero { width: 100%; text-align: center; }
+  .hero-buttons { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
+  .whatsapp-float { bottom: 80px; right: 16px; width: 54px; height: 54px; }
+  .whatsapp-float svg { width: 28px; height: 28px; }
+  .container { padding: 0 20px; }
+  .faq-item summary { font-size: 14px; padding: 16px 48px 16px 20px; }
+  .faq-item .faq-resposta { font-size: 13.5px; padding: 0 20px 16px; }
+  .depoimentos-placeholder { padding: 40px 20px; }
+  .cta-demo h2 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== CABEÇALHO ===== -->
+<header>
+  <div class="container header-content">
+    <div class="logo-area">
+      <div class="logo-halo">
+        <img src="Logo.png" alt="MP Serviços" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="logo-fallback" style="display:none;">MP</span>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">MP Serviços</span>
+        <span class="brand-product">Síndico Profissional</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#ferramentas">Ferramentas</a></li>
+        <li><a href="#para-quem">Para quem</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">MP Serviços · Gestão Condominial Profissional</span>
+    <h1>Michell Patrick<br>Síndico Profissional & Assessor Condominial</h1>
+    <p>Gestão administrativa e financeira profissional, conservação patrimonial, governança e compliance. O rigor da auditoria aplicado ao dia a dia do seu condomínio.</p>
+    <div class="hero-buttons">
+      <a href="#contato" class="btn btn-primary">Falar com especialista</a>
+      <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20condom%C3%ADnio%20com%20o%20Michell%20Patrick" class="btn-demo-hero" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOBRE ===== -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <h2 class="section-title">Sobre Michell Patrick</h2>
+    <div class="sobre-content">
+      <p>Administrador com mais de <strong>20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor (COIAB). Formou-se síndico profissional e em administração de condomínios (<strong>72 horas de formação específica</strong>) antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal. Conhece o condomínio dos dois lados: o controle e a gestão.</p>
+      <p>Trouxe para a gestão condominial o que há de mais moderno em governança corporativa: controles internos, análise de custos, transparência e compliance. Não trabalho com "achismos" — cada decisão tem método, lastro técnico e respaldo documental. O dinheiro do condômino é tratado com o mesmo rigor de uma grande empresa, porque é.</p>
+      <p>Gestão participativa: as decisões são tomadas com o conselho e com os moradores. Os resultados são de todos — não do síndico.</p>
+      <div class="sobre-credenciais">
+        <strong>Credenciais:</strong> MBA em Finanças, Controladoria e Auditoria · MBA em Gestão de Projetos e Processos (artigo nota 9,9 sobre governança em OSCs) · MBA em Gestão da Qualidade · MBA em Gestão de Pessoas · Formação em Síndico Profissional (72h) · Graduação em Administração.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SINAIS DE ALERTA ===== -->
+<section class="problema" id="problema">
+  <div class="container">
+    <h2 class="section-title">Sinais de alerta no seu condomínio</h2>
+    <p class="section-subtitle">Pandemia, inadimplência, obra emergencial, caixa curto. O condomínio que não tem gestão financeira sólida quebra na primeira crise — e a conta sobra para o morador.</p>
+          <ul class="problema-list">
+      <li>
+        <span class="icon"><i class="ph-bold ph-currency-circle-dollar"></i></span> 
+        Cobrou taxa extra e fundo de reserva, mas não fez gestão. Vai pagar duas vezes.
+      </li>
+      <li>
+        <span class="icon"><i class="ph-bold ph-drop"></i></span> 
+        Um dia sem água. Quando o síndico é fraco, a dor é forte.
+      </li>
+      <li>
+        <span class="icon"><i class="ph-bold ph-receipt"></i></span> 
+        Transparência não é pagar em dia. É gastar certo, para o condômino não pagar o dobro.
+      </li>
+      <li>
+        <span class="icon"><i class="ph-bold ph-scales"></i></span> 
+        Quando regimento, convenção e Assembleias não conversam, quem conflita são os condôminos.
+      </li>
+      <li>
+        <span class="icon"><i class="ph-bold ph-warning"></i></span> 
+        Pergunta que ninguém quer ouvir: "Cadê o saldo da taxa extra?"
+      </li>
+      <li>
+        <span class="icon"><i class="ph-bold ph-magnifying-glass"></i></span> 
+        Como o condomínio vai se recuperar se ele não sabe onde estão os problemas?
+      </li>
+    </ul>
+    <div class="problema-fechamento">
+      Não é falta de vontade da equipe. É falta de governança e compliance.
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÉTODO / 5 PILARES ===== -->
+<section id="metodo">
+  <div class="container">
+    <h2 class="section-title">Método de Gestão: Os 5 Pilares</h2>
+    <p class="section-subtitle">Não trabalho com "achismos". Minha gestão é baseada em cinco pilares técnicos que garantem a saúde financeira, a segurança jurídica e a valorização do seu patrimônio.</p>
+    <div class="passos">
+      <div class="passo-card">
+        <div class="passo-numero">01</div>
+        <h3>Gestão Financeira e Orçamentária</h3>
+        <p>Planejamento realista e controles rígidos sobre arrecadação e despesa. Gestão segregada de verbas (taxas extras e fundo de reserva) para cumprimento do Código Civil e proteção contra sanções.</p>
+      </div>
+      <div class="passo-card">
+        <div class="passo-numero">02</div>
+        <h3>Gestão Patrimonial e de Infraestrutura</h3>
+        <p>Planejamento de manutenção preventiva focado na valorização do imóvel. Cronogramas prediais para evitar que pequenos problemas se tornem obras emergenciais de alto custo.</p>
+      </div>
+      <div class="passo-card">
+        <div class="passo-numero">03</div>
+        <h3>Gestão Operacional e de Pessoas</h3>
+        <p>Organização de rotinas, fluxos de atendimento e gestão de equipes e fornecedores. Ferramentas digitais para checklists de rotina e rastreio de serviços contratados.</p>
+      </div>
+      <div class="passo-card">
+        <div class="passo-numero">04</div>
+        <h3>Segurança e Convivência</h3>
+        <p>Auditoria de sistemas de segurança (CFTV, cercas, controle de acesso) e conservação de áreas comuns. Espaços seguros que incentivam a integração da comunidade.</p>
+      </div>
+      <div class="passo-card">
+        <div class="passo-numero">05</div>
+        <h3>Governança, Compliance e Transparência</h3>
+        <p>Alinhamento das práticas à convenção, ao regimento e à legislação. Gestão cruzada de documentos (atas, convenção, regimento) para decisões com respaldo legal.</p>
+      </div>
+      <div class="passo-card">
+        <div class="passo-numero">06</div>
+        <h3>Diagnóstico e Plano de Ação</h3>
+        <p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado, personalizado para a realidade do condomínio.</p>
+      </div>
+    </div>
+    <div class="fluxo">
+      Diagnóstico → Planejamento → Execução → Controle → Transparência → Contabilização
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIFERENCIAIS ===== -->
+<section class="diferenciais" id="diferenciais">
+  <div class="container">
+    <h2 class="section-title">Por que me contratar</h2>
+    <p class="section-subtitle">O desenho da gestão trata o recurso, a documentação e o histórico como partes de um mesmo processo.</p>
+    <div class="diferenciais-list">
+      <div class="diferencial-item">
+        <span class="diferencial-numero">01</span>
+        <div>
+          <h3>Rigor de auditoria, não de "achismo"</h3>
+          <p>MBA em Controladoria e Auditoria + formação específica em síndico profissional (72h) + 20 anos em indústria e terceiro setor. A técnica de auditoria aplicada ao condomínio.</p>
+        </div>
+      </div>
+      <div class="diferencial-item">
+        <span class="diferencial-numero">02</span>
+        <div>
+          <h3>Transparência que o morador entende</h3>
+          <p>Prestação de contas com dashboards visuais (Looker Studio / Excel Avançado). O conselho e o morador enxergam exatamente para onde vai cada centavo — sem planilha obscura.</p>
+        </div>
+      </div>
+      <div class="diferencial-item">
+        <span class="diferencial-numero">03</span>
+        <div>
+          <h3>Gestão com respaldo jurídico</h3>
+          <p>Decisões alinhadas à convenção, ao regimento e ao Código Civil. Gestão cruzada de atas e documentos para que toda decisão tenha respaldo legal e seja imune a questionamentos infundados.</p>
+        </div>
+      </div>
+      <div class="diferencial-item">
+        <span class="diferencial-numero">04</span>
+        <div>
+          <h3>Isenção e método</h3>
+          <p>Síndico profissional não mora no condomínio, não tem conflito de interesse com vizinhos e governa por processo, com equipe de apoio e disponibilidade para o que importa. O modelo de gestão profissional, não de voluntário.</p>
+        </div>
+      </div>
+      <div class="diferencial-item">
+        <span class="diferencial-numero">05</span>
+        <div>
+          <h3>Tecnologia e processos rastreáveis</h3>
+	<p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet, Google Workspace) para que portaria, encomendas, manutenção e contratos sejam rastreáveis e auditáveis. O que foi pago é efetivamente entregue — e há registro.</p>
+        </div>
+      </div>
+      <div class="diferencial-item">
+        <span class="diferencial-numero">06</span>
+        <div>
+          <h3>Respeito à autonomia institucional</h3>
+          <p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas, não disruptivas por natureza — disruptivas só se o condomínio quiser. Governança e compliance com respeito à essência do condomínio e dos condôminos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FERRAMENTAS ===== -->
+<section class="funcionalidades" id="ferramentas">
+  <div class="container">
+    <h2 class="section-title">Ferramentas e Governança</h2>
+    <p class="section-subtitle">Tecnologia e transparência a serviço do condomínio. Não gerencio com base em "achismos" — utilizo ferramentas de mercado para dar visibilidade aos números e processos.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="card-icon">◈</span>
+        <h3>Dashboards de Gestão</h3>
+        <p>Looker Studio / Excel Avançado. Relatórios visuais e de fácil leitura para que o conselho e os moradores saibam exatamente para onde vai cada centavo.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">✓</span>
+        <h3>Gestão de Processos</h3>
+	<p>Apps Script + HTML, AppSheet e Google Workspace. Desenvolvimento de aplicações web próprias e automações para que o processo administrativo flua de forma ágil, segura e rastreável.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">⏱</span>
+        <h3>Comunicação Profissional</h3>
+        <p>Criação de apresentações profissionais e métodos eficientes de controle administrativo-financeiro para reuniões de conselho e assembleias.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">▣</span>
+        <h3>Controle Orçamentário</h3>
+        <p>Ferramentas de acompanhamento de indicadores e organização de processos para manter os custos sob controle e evitar surpresas no fechamento.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">⌁</span>
+        <h3>Rastreabilidade Documental</h3>
+        <p>Processos auditáveis com registro de decisões, contratos e prestações de contas. Histórico preservado, sem apagar o passado.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">▤</span>
+        <h3>Gestão de Contratos e Fornecedores</h3>
+        <p>Revisão periódica de contratos e cotações rigorosas, buscando economia sem perda de qualidade e garantindo que o serviço pago seja entregue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO POSSO ATUAR ===== -->
+<section id="como-atuar">
+  <div class="container">
+    <h2 class="section-title">Como posso atuar no seu condomínio</h2>
+    <p class="section-subtitle">Três formas de trabalho, sempre com respeito à autonomia institucional e às necessidades específicas do seu condomínio.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <span class="card-icon">◈</span>
+        <h3>Síndico Profissional</h3>
+        <p>Assunção completa da gestão administrativa, financeira e operacional, com representação legal, método, controles e transparência. Gestão profissional que respeita a autonomia do condomínio.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">✓</span>
+        <h3>Assessoria Condominial</h3>
+        <p>Apoio técnico e financeiro para síndicos moradores que precisam de ajuda na organização, no controle e na implantação de processos. O condomínio decide; a assessoria executa com método.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">▣</span>
+        <h3>Diagnóstico e Plano de Ação</h3>
+        <p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado. Propostas personalizadas, disruptivas só se o condomínio quiser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARA QUEM ===== -->
+<section id="para-quem">
+  <div class="container">
+    <h2 class="section-title">Para quem é a MP Serviços</h2>
+    <div class="para-quem-content">
+      <p>Condomínios que buscam gestão profissional, transparente e financeiramente responsável, com respeito à sua autonomia e à sua realidade.</p>
+      <ul class="lista-publico">
+        <li>Condomínios residenciais</li>
+        <li>Condomínios comerciais</li>
+        <li>Conselhos fiscais e consultivos</li>
+        <li>Síndicos moradores que precisam de apoio técnico</li>
+        <li>Administradoras que buscam parceria técnica</li>
+        <li>Condomínios em fase de transição de gestão</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <p class="section-subtitle">As dúvidas mais comuns de quem está avaliando a gestão profissional.</p>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>O que faz um síndico profissional?</summary>
+        <div class="faq-resposta">
+          <p>O síndico profissional assume a gestão administrativa, financeira e operacional do condomínio, com representação legal, método, controles e transparência. Diferente do síndico morador, ele não tem conflito de interesse com vizinhos e dedica-se à gestão por processo, com equipe de apoio.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Qual a diferença entre síndico morador e síndico profissional?</summary>
+        <div class="faq-resposta">
+          <p>O síndico morador tem boa vontade, mas acumula função, enfrenta conflito de interesse e nem sempre tem formação técnica. O síndico profissional traz <strong>técnica, tempo, isenção e responsabilidade formal</strong>. A gestão deixa de depender da boa vontade de um voluntário e passa a ter método e lastro.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como funciona a prestação de contas?</summary>
+        <div class="faq-resposta">
+          <p>A prestação de contas é feita com <strong>relatórios visuais (dashboards)</strong>, gestão segregada de verbas e cumprimento estrito do Código Civil. O conselho e os moradores enxergam exatamente para onde vai cada centavo, com transparência e rastreabilidade.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O síndico profissional pode cuidar de mais de um condomínio?</summary>
+        <div class="faq-resposta">
+          <p>Sim. O modelo de síndico profissional é baseado em <strong>método, processos e equipe de apoio</strong> — não em presença física integral. É o mesmo modelo adotado por administradoras e síndicos profissionais em todo o país. O que garante a qualidade é o sistema de gestão, não o número de horas sentado na mesa.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O síndico profissional vai mudar tudo no condomínio?</summary>
+        <div class="faq-resposta">
+          <p>Não por natureza. O condomínio é uma empresa, com CNPJ e autonomia institucional. As propostas são <strong>personalizadas, não disruptivas</strong> — disruptivas só se o condomínio quiser. Governança e compliance são o foco, mas sempre com respeito à essência do condomínio e dos condôminos.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como é feita a transição do síndico atual?</summary>
+        <div class="faq-resposta">
+          <p>A transição começa com um diagnóstico inicial: auditoria de contratos, finanças e infraestrutura. A partir disso, é apresentado um plano de ação estruturado e a transição é assistida, sem quebra de continuidade na operação do condomínio.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O serviço pode ser contratado como PJ?</summary>
+        <div class="faq-resposta">
+          <p>Sim. A <strong>MP Serviços</strong> é uma empresa regular, com CNPJ ativo e certidão negativa de débitos federais. O contrato pode ser firmado com a pessoa jurídica, com emissão de nota fiscal.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto custa?</summary>
+        <div class="faq-resposta">
+          <p>O valor depende do porte e do escopo do condomínio. O diagnóstico inicial define a proposta personalizada, considerando a realidade financeira e as necessidades específicas de cada condomínio.</p>
+        </div>
+      </details>
+
+      <!-- 👇 NOVO FAQ INSERIDO AQUI 👇 -->
+      <details class="faq-item">
+        <summary>Você desenvolve sistemas próprios para o condomínio?</summary>
+        <div class="faq-resposta">
+          <p>Sim. Utilizo <strong>Apps Script + HTML, AppSheet e Google Workspace</strong> para criar aplicações web e automações personalizadas, de acordo com a necessidade do condomínio. Isso permite mais agilidade, menos custo e processos rastreáveis — sem depender exclusivamente de sistemas prontos de terceiros.</p>
+        </div>
+      </details>
+      <!-- 👆 FIM DO NOVO FAQ 👆 -->
+
+    </div>
+  </div>
+</section>
+
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <h2 class="section-title">O que dizem sobre a gestão</h2>
+    <p class="section-subtitle">Depoimentos de condomínios que estão transformando a gestão com método e transparência.</p>
+    <div class="depoimentos-placeholder">
+      <span class="icon-placeholder">❝</span>
+      <h3>Em breve, novos depoimentos</h3>
+      <p>Esta seção está reservada para receber os primeiros relatos de condomínios que adotarem a gestão profissional da MP Serviços. Cada história vai mostrar como o método reduziu perdas, atrasos e falhas de rastreabilidade na administração condominial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA DEMONSTRAÇÃO ===== -->
+<section class="cta-demo">
+  <div class="container">
+    <h2>Veja o método funcionando</h2>
+    <p>Agende um diagnóstico inicial e veja como a gestão profissional pode transformar o seu condomínio — do controle financeiro à transparência para os moradores.</p>
+    <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20m%C3%A9todo%20de%20gest%C3%A3o%20condominial" class="btn-demo-hero" target="_blank" rel="noopener">Agendar diagnóstico no WhatsApp</a>
+  </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section id="contato">
+  <div class="container">
+    <h2 class="section-title">Fale com um especialista</h2>
+    <p class="section-subtitle">Preencha o formulário e retornaremos em até 1 dia útil.</p>
+    <!-- ATENÇÃO: Crie seu formulário no Formspree (formspree.io) e substitua "SEU_ID_AQUI" pelo seu ID -->
+	<form class="contact-form contato-form" action="https://formspree.io/f/xyeeyabk" method="POST">
+      <p class="form-obrigatorio">Os campos marcados com * são obrigatórios.</p>
+      <div>
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div>
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+      </div>
+      <button type="submit">Enviar mensagem</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo-halo">
+          <img src="Logo.png" alt="MP Serviços" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="logo-fallback" style="display:none;">MP</span>
+        </div>
+        <div class="footer-brand-text">
+          <span class="footer-brand-name">MP Serviços</span>
+          <span class="footer-brand-tag">Michell Patrick — Síndico Profissional</span>
+        </div>
+      </div>
+      <div class="footer-contato">
+        <a href="mailto:mpsmdem@gmail.com">mpsmdem@gmail.com</a>
+        <a href="https://wa.me/5592985537155">(92) 98553-7155</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#ferramentas">Ferramentas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MP Serviços. Todos os direitos reservados.</p>
+      <p>CNPJ: 41.799.944/0001-58 · Manaus/AM</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20gest%C3%A3o%20condominial" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#ffffff">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</body>
+</html>
