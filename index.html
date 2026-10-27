@@ -9,8 +9,8 @@
 <meta property="og:title" content="Michell Patrick — Síndico Profissional | MP Serviços">
 <meta property="og:description" content="Gestão condominial com método, rigor financeiro e visão de longo prazo. Do diagnóstico à contabilização.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://mpsmdem-estrela.github.io/portfolio/">
-<meta property="og:image" content="https://mpsmdem-estrela.github.io/portfolio/og-image.jpg">
+<meta property="og:url" content="https://mpsmdem-estrela.github.io/MP_Servicos/">
+<meta property="og:image" content="https://mpsmdem-estrela.github.io/MP_Servicos/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Michell Patrick — Síndico Profissional">
@@ -696,13 +696,29 @@ footer {
 }
 .whatsapp-float svg { width: 32px; height: 32px; fill: var(--branco); }
 
-/* ===== RESPONSIVO ===== */
+/* ===== NOVOS ESTILOS E RESPONSIVIDADE ===== */
+.prova-numeros { background: var(--azul-institucional); padding: 40px 0; border-bottom: 1px solid var(--borda); }
+.grid-numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 16px; text-align: center; }
+.numero-destaque { font-size: 36px; font-weight: 800; color: var(--azul-claro); line-height: 1.1; margin-bottom: 6px; }
+.numero-label { font-size: 12px; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+.obras { background: var(--azul-medio); padding: 60px 0; }
+.grid-fotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+.foto-card { background: var(--azul-institucional); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s; }
+.foto-card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
+.foto-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+.foto-legenda { padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--branco); }
+
+.citacao-auditoria { background: var(--azul-institucional); padding: 60px 0; }
+.citacao-texto { font-size: 20px; font-style: italic; color: var(--cinza-claro); line-height: 1.6; margin-bottom: 20px; text-align: center; }
+.citacao-fonte { font-size: 13px; font-weight: 600; color: var(--azul-claro); letter-spacing: 1px; text-transform: uppercase; text-align: center; display: block; }
+
+/* Responsividade */
 @media (max-width: 900px) {
   nav ul { display: none; }
   .hero h1 { font-size: 38px; }
-  .passos { grid-template-columns: 1fr; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .lista-publico { grid-template-columns: 1fr; }
+  .passos, .cards-grid, .lista-publico, .grid-fotos { grid-template-columns: 1fr; }
+  .grid-numeros { grid-template-columns: repeat(2, 1fr); }
   .footer-content { flex-direction: column; align-items: flex-start; }
   .section-title { font-size: 28px; }
   .cta-demo h2 { font-size: 26px; }
@@ -723,6 +739,8 @@ footer {
   .faq-item .faq-resposta { font-size: 13.5px; padding: 0 20px 16px; }
   .depoimentos-placeholder { padding: 40px 20px; }
   .cta-demo h2 { font-size: 22px; }
+  .grid-numeros { grid-template-columns: 1fr; gap: 24px; }
+  .numero-destaque { font-size: 32px; }
 }
 </style>
 </head>
@@ -758,12 +776,55 @@ footer {
 <section class="hero">
   <div class="container">
     <span class="hero-eyebrow">MP Serviços · Gestão Condominial Profissional</span>
-    <h1>Michell Patrick<br>Síndico Profissional & Assessor Condominial</h1>
-    <p>Gestão administrativa e financeira profissional, conservação patrimonial, governança e compliance. O rigor da auditoria aplicado ao dia a dia do seu condomínio.</p>
+    <h1>Síndico profissional com 20 anos em auditoria.<br>10 auditorias externas aprovadas.</h1>
+    <p>Gestão condominial com método, rigor financeiro e transparência — do diagnóstico à contabilização, sem aumento de taxa.</p>
     <div class="hero-buttons">
-      <a href="#contato" class="btn btn-primary">Falar com especialista</a>
-      <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20condom%C3%ADnio%20com%20o%20Michell%20Patrick" class="btn-demo-hero" target="_blank" rel="noopener">Agendar diagnóstico</a>
+      <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20condom%C3%ADnio" class="btn-demo-hero" target="_blank" rel="noopener">Agendar diagnóstico no WhatsApp</a>
     </div>
+  </div>
+</section>
+
+<!-- ===== PROVA SOCIAL (NÚMEROS) ===== -->
+<section class="prova-numeros">
+  <div class="container">
+    <div class="grid-numeros">
+      <div><div class="numero-destaque">R$ 36 mil</div><div class="numero-label">Economizados / ano</div></div>
+      <div><div class="numero-destaque">26</div><div class="numero-label">Blocos impermeabilizados</div></div>
+      <div><div class="numero-destaque">100%</div><div class="numero-label">Dos blocos com CFTV</div></div>
+      <div><div class="numero-destaque">0</div><div class="numero-label">Aumento de taxa (4 anos)</div></div>
+      <div><div class="numero-destaque">10</div><div class="numero-label">Auditorias aprovadas</div></div>
+      <div><div class="numero-destaque">148</div><div class="numero-label">Prestações de contas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTADOS EM CAMPO (FOTOS) ===== -->
+<section class="obras">
+  <div class="container">
+    <h2 class="section-title">Resultados em campo</h2>
+    <p class="section-subtitle">O método aplicado na prática. Obras e melhorias entregues no Condomínio Jardim Paradiso Antúrio.</p>
+    <div class="grid-fotos">
+      <div class="foto-card">
+        <img src="assets/img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy">
+        <div class="foto-legenda">Portaria revitalizada</div>
+      </div>
+      <div class="foto-card">
+        <img src="assets/img/piscina.jpg" alt="Piscina reformada com piso novo do Condomínio Jardim Paradiso Antúrio" loading="lazy">
+        <div class="foto-legenda">Piscina com piso novo</div>
+      </div>
+      <div class="foto-card">
+        <img src="assets/img/quadra_poliesportiva.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy">
+        <div class="foto-legenda">Quadra poliesportiva</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CITAÇÃO DE AUDITORIA ===== -->
+<section class="citacao-auditoria">
+  <div class="container" style="max-width: 820px;">
+    <p class="citacao-texto">"Efetuamos análise nas operações realizadas no período e verificamos que as operações foram contabilizadas de forma adequada, demonstrando uma situação satisfatória de gerenciamento das contas contábeis."</p>
+    <span class="citacao-fonte">— Relatório de Auditoria Externa, 2023</span>
   </div>
 </section>
 
@@ -772,93 +833,43 @@ footer {
   <div class="container">
     <h2 class="section-title">Sobre Michell Patrick</h2>
     <div class="sobre-content">
-      <p>Administrador com mais de <strong>20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor (COIAB). Formou-se síndico profissional e em administração de condomínios, antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal. Conhece o condomínio dos dois lados: o controle e a gestão.</p>
+      <p>Administrador com mais de <strong>20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor. Formou-se síndico profissional e em administração de condomínios, antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal. Conhece o condomínio dos dois lados: o controle e a gestão.</p>
       <p>Trouxe para a gestão condominial o que há de mais moderno em governança corporativa: controles internos, análise de custos, transparência e compliance. Não trabalho com "achismos" — cada decisão tem método, lastro técnico e respaldo documental. O dinheiro do condômino é tratado com o mesmo rigor de uma grande empresa, porque é.</p>
-      <p>Gestão participativa: as decisões são tomadas com o conselho e com os moradores. Os resultados são de todos — não do síndico.</p>
       <div class="sobre-credenciais">
-        <strong>Credenciais:</strong> MBA em Finanças, Controladoria e Auditoria · MBA em Gestão de Projetos e Processos (artigo nota 9,9 sobre governança em OSCs) · MBA em Gestão da Qualidade · MBA em Gestão de Pessoas · Formação em Síndico Profissional (72h) · Graduação em Administração.
+        <strong>Credenciais:</strong> MBA em Finanças, Controladoria e Auditoria · MBA em Gestão de Projetos e Processos · MBA em Gestão da Qualidade · MBA em Gestão de Pessoas · Formação em Síndico Profissional (72h) · Graduação em Administração.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SINAIS DE ALERTA ===== -->
+<!-- ===== SINAIS DE ALERTA (COMPACTADO) ===== -->
 <section class="problema" id="problema">
   <div class="container">
     <h2 class="section-title">Sinais de alerta no seu condomínio</h2>
-    <p class="section-subtitle">Fundo de reserva e taxa extra mal geridos, inadimplência, obra emergencial, caixa curto. O condomínio que não tem gestão financeira sólida quebra na primeira crise — e a conta sobra para o morador.</p>
-          <ul class="problema-list">
-      <li>
-        <span class="icon"><i class="ph-bold ph-currency-circle-dollar"></i></span> 
-        Cobrou taxa extra e fundo de reserva, mas não fez gestão. Vai pagar duas vezes.
-      </li>
-      <li>
-        <span class="icon"><i class="ph-bold ph-drop"></i></span> 
-        Um dia sem água. Quando o síndico é fraco, a dor é forte.
-      </li>
-      <li>
-        <span class="icon"><i class="ph-bold ph-receipt"></i></span> 
-        Transparência não é pagar em dia. É gastar certo, para o condômino não pagar o dobro.
-      </li>
-      <li>
-        <span class="icon"><i class="ph-bold ph-scales"></i></span> 
-        Quando regimento, convenção e Assembleias não conversam, quem conflita são os condôminos.
-      </li>
-      <li>
-        <span class="icon"><i class="ph-bold ph-warning"></i></span> 
-        Pergunta que ninguém quer ouvir: "Cadê o saldo da taxa extra?"
-      </li>
-      <li>
-        <span class="icon"><i class="ph-bold ph-magnifying-glass"></i></span> 
-        Como o condomínio vai se recuperar se ele não sabe onde estão os problemas?
-      </li>
+    <p class="section-subtitle">O condomínio que não tem gestão financeira sólida quebra na primeira crise — e a conta sobra para o morador.</p>
+    <ul class="problema-list">
+      <li><span class="icon"><i class="ph-bold ph-currency-circle-dollar"></i></span> Cobrou taxa extra e fundo de reserva, mas não fez gestão. Vai pagar duas vezes.</li>
+      <li><span class="icon"><i class="ph-bold ph-receipt"></i></span> Transparência não é pagar em dia. É gastar certo, para o condômino não pagar o dobro.</li>
+      <li><span class="icon"><i class="ph-bold ph-warning"></i></span> Pergunta que ninguém quer ouvir: "Cadê o saldo da taxa extra?"</li>
     </ul>
-    <div class="problema-fechamento">
-      Não é falta de vontade da equipe. É falta de governança e compliance.
-    </div>
+    <div class="problema-fechamento">Não é falta de vontade da equipe. É falta de governança e compliance.</div>
   </div>
 </section>
 
-<!-- ===== MÉTODO / 5 PILARES ===== -->
+<!-- ===== MÉTODO ===== -->
 <section id="metodo">
   <div class="container">
     <h2 class="section-title">Método de Gestão: Os 5 Pilares</h2>
-    <p class="section-subtitle">Não trabalho com "achismos". Minha gestão é baseada em cinco pilares técnicos que garantem a saúde financeira, a segurança jurídica e a valorização do seu patrimônio.</p>
+    <p class="section-subtitle">Minha gestão é baseada em cinco pilares técnicos que garantem a saúde financeira, a segurança jurídica e a valorização do seu patrimônio.</p>
     <div class="passos">
-      <div class="passo-card">
-        <div class="passo-numero">01</div>
-        <h3>Gestão Financeira e Orçamentária</h3>
-        <p>Planejamento realista e controles rígidos sobre arrecadação e despesa. Gestão segregada de verbas (taxas extras e fundo de reserva) para cumprimento do Código Civil e proteção contra sanções.</p>
-      </div>
-      <div class="passo-card">
-        <div class="passo-numero">02</div>
-        <h3>Gestão Patrimonial e de Infraestrutura</h3>
-        <p>Planejamento de manutenção preventiva focado na valorização do imóvel. Cronogramas prediais para evitar que pequenos problemas se tornem obras emergenciais de alto custo.</p>
-      </div>
-      <div class="passo-card">
-        <div class="passo-numero">03</div>
-        <h3>Gestão Operacional e de Pessoas</h3>
-        <p>Organização de rotinas, fluxos de atendimento e gestão de equipes e fornecedores. Ferramentas digitais para checklists de rotina e rastreio de serviços contratados.</p>
-      </div>
-      <div class="passo-card">
-        <div class="passo-numero">04</div>
-        <h3>Segurança e Convivência</h3>
-        <p>Auditoria de sistemas de segurança (CFTV, cercas, controle de acesso) e conservação de áreas comuns. Espaços seguros que incentivam a integração da comunidade.</p>
-      </div>
-      <div class="passo-card">
-        <div class="passo-numero">05</div>
-        <h3>Governança, Compliance e Transparência</h3>
-        <p>Alinhamento das práticas à convenção, ao regimento e à legislação. Gestão cruzada de documentos (atas, convenção, regimento) para decisões com respaldo legal.</p>
-      </div>
-      <div class="passo-card">
-        <div class="passo-numero">06</div>
-        <h3>Diagnóstico e Plano de Ação</h3>
-        <p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado, personalizado para a realidade do condomínio.</p>
-      </div>
+      <div class="passo-card"><div class="passo-numero">01</div><h3>Gestão Financeira</h3><p>Planejamento realista e controles rígidos sobre arrecadação e despesa. Gestão segregada de verbas (taxas extras e fundo de reserva).</p></div>
+      <div class="passo-card"><div class="passo-numero">02</div><h3>Gestão Patrimonial</h3><p>Manutenção preventiva focada na valorização do imóvel. Cronogramas prediais para evitar obras emergenciais de alto custo.</p></div>
+      <div class="passo-card"><div class="passo-numero">03</div><h3>Gestão Operacional</h3><p>Organização de rotinas, fluxos de atendimento e gestão de equipes e fornecedores com ferramentas digitais.</p></div>
+      <div class="passo-card"><div class="passo-numero">04</div><h3>Segurança e Convivência</h3><p>Auditoria de sistemas de segurança (CFTV, cercas, controle de acesso) e conservação de áreas comuns.</p></div>
+      <div class="passo-card"><div class="passo-numero">05</div><h3>Governança e Compliance</h3><p>Alinhamento das práticas à convenção, ao regimento e à legislação. Gestão cruzada de documentos para decisões com respaldo legal.</p></div>
+      <div class="passo-card"><div class="passo-numero">06</div><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado.</p></div>
     </div>
-    <div class="fluxo">
-      Diagnóstico → Planejamento → Execução → Controle → Transparência → Contabilização
-    </div>
+    <div class="fluxo">Diagnóstico → Planejamento → Execução → Controle → Transparência → Contabilização</div>
   </div>
 </section>
 
@@ -866,54 +877,16 @@ footer {
 <section class="diferenciais" id="diferenciais">
   <div class="container">
     <h2 class="section-title">Por que me contratar</h2>
-    <p class="section-subtitle">O desenho da gestão trata o recurso, a documentação e o histórico como partes de um mesmo processo.</p>
     <div class="diferenciais-list">
-      <div class="diferencial-item">
-        <span class="diferencial-numero">01</span>
-        <div>
-          <h3>Rigor de auditoria, não de "achismo"</h3>
-          <p>MBA em Controladoria e Auditoria + formação específica em síndico profissional (72h) + 20 anos em indústria e terceiro setor. A técnica de auditoria aplicada ao condomínio.</p>
-        </div>
-      </div>
-      <div class="diferencial-item">
-        <span class="diferencial-numero">02</span>
-        <div>
-          <h3>Transparência que o morador entende</h3>
-          <p>Prestação de contas com dashboards visuais (Looker Studio / Excel Avançado). O conselho e o morador enxergam exatamente para onde vai cada centavo — sem planilha obscura.</p>
-        </div>
-      </div>
-      <div class="diferencial-item">
-        <span class="diferencial-numero">03</span>
-        <div>
-          <h3>Gestão com respaldo jurídico</h3>
-          <p>Decisões alinhadas à convenção, ao regimento e ao Código Civil. Gestão cruzada de atas e documentos para que toda decisão tenha respaldo legal e seja imune a questionamentos infundados.</p>
-        </div>
-      </div>
-      <div class="diferencial-item">
-        <span class="diferencial-numero">04</span>
-        <div>
-          <h3>Isenção e método</h3>
-          <p>Síndico profissional não mora no condomínio, não tem conflito de interesse com vizinhos e governa por processo, com equipe de apoio e disponibilidade para o que importa. O modelo de gestão profissional, não de voluntário.</p>
-        </div>
-      </div>
-      <div class="diferencial-item">
-        <span class="diferencial-numero">05</span>
-        <div>
-          <h3>Tecnologia e processos rastreáveis</h3>
-	<p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet, Google Workspace) para que portaria, encomendas, manutenção e contratos sejam rastreáveis e auditáveis. O que foi pago é efetivamente entregue — e há registro.</p>
-        </div>
-      </div>
-      <div class="diferencial-item">
-        <span class="diferencial-numero">06</span>
-        <div>
-          <h3>Respeito à autonomia institucional</h3>
-          <p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas, não disruptivas por natureza — disruptivas só se o condomínio quiser. Governança e compliance com respeito à essência do condomínio e dos condôminos.</p>
-        </div>
-      </div>
+      <div class="diferencial-item"><span class="diferencial-numero">01</span><div><h3>Rigor de auditoria</h3><p>MBA em Controladoria e Auditoria + formação específica em síndico profissional (72h) + 20 anos em indústria e terceiro setor.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">02</span><div><h3>Transparência que o morador entende</h3><p>Prestação de contas com dashboards visuais (Looker Studio / Excel Avançado). O morador enxerga para onde vai cada centavo.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">03</span><div><h3>Gestão com respaldo jurídico</h3><p>Decisões alinhadas à convenção, ao regimento e ao Código Civil. Gestão cruzada de atas e documentos.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">04</span><div><h3>Isenção e método</h3><p>Síndico profissional não mora no condomínio, não tem conflito de interesse com vizinhos e governa por processo.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">05</span><div><h3>Tecnologia e processos rastreáveis</h3><p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet) para que tudo seja rastreável e auditável.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">06</span><div><h3>Respeito à autonomia</h3><p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas, não disruptivas por natureza.</p></div></div>
     </div>
   </div>
 </section>
-
 <!-- ===== FERRAMENTAS ===== -->
 <section class="funcionalidades" id="ferramentas">
   <div class="container">
@@ -928,7 +901,7 @@ footer {
       <div class="card">
         <span class="card-icon">✓</span>
         <h3>Gestão de Processos</h3>
-	<p>Apps Script + HTML, AppSheet e Google Workspace. Desenvolvimento de aplicações web próprias e automações para que o processo administrativo flua de forma ágil, segura e rastreável.</p>
+        <p>Apps Script + HTML, AppSheet e Google Workspace. Desenvolvimento de aplicações web próprias e automações para que o processo administrativo flua de forma ágil, segura e rastreável.</p>
       </div>
       <div class="card">
         <span class="card-icon">⏱</span>
@@ -957,28 +930,14 @@ footer {
 <!-- ===== COMO POSSO ATUAR ===== -->
 <section id="como-atuar">
   <div class="container">
-    <h2 class="section-title">Como posso atuar no seu condomínio</h2>
-    <p class="section-subtitle">Três formas de trabalho, sempre com respeito à autonomia institucional e às necessidades específicas do seu condomínio.</p>
+    <h2 class="section-title">Como posso atuar</h2>
     <div class="cards-grid">
-      <div class="card">
-        <span class="card-icon">◈</span>
-        <h3>Síndico Profissional</h3>
-        <p>Assunção completa da gestão administrativa, financeira e operacional, com representação legal, método, controles e transparência. Gestão profissional que respeita a autonomia do condomínio.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">✓</span>
-        <h3>Assessoria Condominial</h3>
-        <p>Apoio técnico e financeiro para síndicos moradores que precisam de ajuda na organização, no controle e na implantação de processos. O condomínio decide; a assessoria executa com método.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">▣</span>
-        <h3>Diagnóstico e Plano de Ação</h3>
-        <p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado. Propostas personalizadas, disruptivas só se o condomínio quiser.</p>
-      </div>
+      <div class="card"><span class="card-icon">◈</span><h3>Síndico Profissional</h3><p>Assunção completa da gestão administrativa, financeira e operacional, com representação legal, método e transparência.</p></div>
+      <div class="card"><span class="card-icon">✓</span><h3>Assessoria Condominial</h3><p>Apoio técnico e financeiro para síndicos moradores que precisam de ajuda na organização e no controle.</p></div>
+      <div class="card"><span class="card-icon">▣</span><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual e apresentação de um plano de melhorias estruturado e personalizado.</p></div>
     </div>
   </div>
 </section>
-
 <!-- ===== PARA QUEM ===== -->
 <section id="para-quem">
   <div class="container">
@@ -1001,96 +960,28 @@ footer {
 <section class="faq" id="faq">
   <div class="container">
     <h2 class="section-title">Perguntas frequentes</h2>
-    <p class="section-subtitle">As dúvidas mais comuns de quem está avaliando a gestão profissional.</p>
-    <div class="faq-list">
-
-      <details class="faq-item">
-        <summary>O que faz um síndico profissional?</summary>
-        <div class="faq-resposta">
-          <p>O síndico profissional assume a gestão administrativa, financeira e operacional do condomínio, com representação legal, método, controles e transparência. Diferente do síndico morador, ele não tem conflito de interesse com vizinhos e dedica-se à gestão por processo, com equipe de apoio.</p>
-        </div>
-      </details>
-
+    <div class="faq-list" style="margin-top: 40px;">
       <details class="faq-item">
         <summary>Qual a diferença entre síndico morador e síndico profissional?</summary>
-        <div class="faq-resposta">
-          <p>O síndico morador tem boa vontade, mas acumula função, enfrenta conflito de interesse e nem sempre tem formação técnica. O síndico profissional traz <strong>técnica, tempo, isenção e responsabilidade formal</strong>. A gestão deixa de depender da boa vontade de um voluntário e passa a ter método e lastro.</p>
-        </div>
+        <div class="faq-resposta"><p>O síndico morador tem boa vontade, mas acumula função, enfrenta conflito de interesse e nem sempre tem formação técnica. O síndico profissional traz <strong>técnica, tempo, isenção e responsabilidade formal</strong>. A gestão passa a ter método e lastro.</p></div>
       </details>
-
-      <details class="faq-item">
-        <summary>Como funciona a prestação de contas?</summary>
-        <div class="faq-resposta">
-          <p>A prestação de contas é feita com <strong>relatórios visuais (dashboards)</strong>, gestão segregada de verbas e cumprimento estrito do Código Civil. O conselho e os moradores enxergam exatamente para onde vai cada centavo, com transparência e rastreabilidade.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>O síndico profissional pode cuidar de mais de um condomínio?</summary>
-        <div class="faq-resposta">
-          <p>Sim. O modelo de síndico profissional é baseado em <strong>método, processos e equipe de apoio</strong> — não em presença física integral. É o mesmo modelo adotado por administradoras e síndicos profissionais em todo o país. O que garante a qualidade é o sistema de gestão, não o número de horas sentado na mesa.</p>
-        </div>
-      </details>
-
       <details class="faq-item">
         <summary>O síndico profissional vai mudar tudo no condomínio?</summary>
-        <div class="faq-resposta">
-          <p>Não por natureza. O condomínio é uma empresa, com CNPJ e autonomia institucional. As propostas são <strong>personalizadas, não disruptivas</strong> — disruptivas só se o condomínio quiser. Governança e compliance são o foco, mas sempre com respeito à essência do condomínio e dos condôminos.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>Como é feita a transição do síndico atual?</summary>
-        <div class="faq-resposta">
-          <p>A transição começa com um diagnóstico inicial: auditoria de contratos, finanças e infraestrutura. A partir disso, é apresentado um plano de ação estruturado e a transição é assistida, sem quebra de continuidade na operação do condomínio.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>O serviço pode ser contratado como PJ?</summary>
-        <div class="faq-resposta">
-          <p>Sim. A <strong>MP Serviços</strong> é uma empresa regular, com CNPJ ativo e certidão negativa de débitos federais. O contrato pode ser firmado com a pessoa jurídica, com emissão de nota fiscal.</p>
-        </div>
+        <div class="faq-resposta"><p>Não por natureza. O condomínio é uma empresa, com CNPJ e autonomia institucional. As propostas são <strong>personalizadas, não disruptivas</strong> — disruptivas só se o condomínio quiser.</p></div>
       </details>
       <details class="faq-item">
-        <summary>Quanto custa?</summary>
-        <div class="faq-resposta">
-          <p>O valor depende do porte e do escopo do condomínio. O diagnóstico inicial define a proposta personalizada, considerando a realidade financeira e as necessidades específicas de cada condomínio.</p>
-        </div>
+        <summary>Como funciona a prestação de contas?</summary>
+        <div class="faq-resposta"><p>A prestação de contas é feita com <strong>relatórios visuais (dashboards)</strong>, gestão segregada de verbas e cumprimento estrito do Código Civil. O morador enxerga exatamente para onde vai cada centavo.</p></div>
       </details>
-
-      <!-- 👇 NOVO FAQ INSERIDO AQUI 👇 -->
       <details class="faq-item">
-        <summary>Você desenvolve sistemas próprios para o condomínio?</summary>
-        <div class="faq-resposta">
-          <p>Sim. Utilizo <strong>Apps Script + HTML, AppSheet e Google Workspace</strong> para criar aplicações web e automações personalizadas, de acordo com a necessidade do condomínio. Isso permite mais agilidade, menos custo e processos rastreáveis — sem depender exclusivamente de sistemas prontos de terceiros.</p>
-        </div>
+        <summary>Quanto custa e como é a transição?</summary>
+        <div class="faq-resposta"><p>O valor depende do porte do condomínio e o diagnóstico inicial define a proposta. A transição começa com um diagnóstico (auditoria de contratos, finanças e infraestrutura) e um plano de ação assistido, sem quebra de continuidade.</p></div>
       </details>
-      <!-- 👆 FIM DO NOVO FAQ 👆 -->
-
     </div>
   </div>
 </section>
 
-        </div>
-      </details>
 
-    </div>
-  </div>
-</section>
-
-<!-- ===== DEPOIMENTOS ===== -->
-<section class="depoimentos" id="depoimentos">
-  <div class="container">
-    <h2 class="section-title">O que dizem sobre a gestão</h2>
-    <p class="section-subtitle">Depoimentos de condomínios que estão transformando a gestão com método e transparência.</p>
-    <div class="depoimentos-placeholder">
-      <span class="icon-placeholder">❝</span>
-      <h3>Em breve, novos depoimentos</h3>
-      <p>Esta seção está reservada para receber os primeiros relatos de condomínios que adotarem a gestão profissional da MP Serviços. Cada história vai mostrar como o método reduziu perdas, atrasos e falhas de rastreabilidade na administração condominial.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ===== CTA DEMONSTRAÇÃO ===== -->
 <section class="cta-demo">
@@ -1107,7 +998,7 @@ footer {
     <h2 class="section-title">Fale com um especialista</h2>
     <p class="section-subtitle">Preencha o formulário e retornaremos em até 1 dia útil.</p>
     <!-- ATENÇÃO: Crie seu formulário no Formspree (formspree.io) e substitua "SEU_ID_AQUI" pelo seu ID -->
-	<form class="contact-form contato-form" action="https://formspree.io/f/xyeeyabk" method="POST">
+	<form class="contato-form" action="https://formspree.io/f/xyeeyabk" method="POST">
       <p class="form-obrigatorio">Os campos marcados com * são obrigatórios.</p>
       <div>
         <label for="nome">Nome *</label>
@@ -1148,6 +1039,7 @@ footer {
         <li><a href="#metodo">Método</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#ferramentas">Ferramentas</a></li>
+        <li><a href="#para-quem">Para quem</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
