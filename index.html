@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Michell Patrick — Síndico Profissional | MP Serviços">
 <meta name="twitter:description" content="Gestão condominial com método, rigor financeiro e visão de longo prazo. Do diagnóstico à contabilização.">
-<meta name="twitter:image" content="https://mpsmdem-estrela.github.io/portfolio/og-image.jpg">
+<meta name="twitter:image" content="https://mpsmdem-estrela.github.io/MP_Servicos/og-image.jpg">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
@@ -42,705 +42,208 @@
 :root {
   --azul-institucional: #0F2233;
   --azul-tecnico: #2E5A88;
-  --azul-medio: #1F3F5B;
   --azul-claro: #4F7FB3;
-  --cinza-metalico: #9AA3A8;
+  --azul-suave: #E8EEF4; 
+  --cinza-metalico: #6D7880; 
   --cinza-claro: #F4F6F8;
   --branco: #FFFFFF;
-  --borda: rgba(46, 90, 136, 0.3);
+  --texto-escuro: #333D45;
+  --borda: #D1D9E0;
   --vermelho: #E74C3C;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--azul-institucional);
-  color: var(--cinza-claro);
+  font-family: 'Montserrat', -apple-system, sans-serif;
+  background: var(--cinza-claro);
+  color: var(--texto-escuro);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* ===== CABEÇALHO ===== */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(15, 34, 51, 0.92);
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(15, 34, 51, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--borda);
-  z-index: 1000;
-  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000; padding: 14px 0;
 }
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.logo-halo {
-  position: relative;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.logo-halo::before {
-  content: '';
-  position: absolute;
-  inset: -14px;
-  background: radial-gradient(circle, rgba(79, 127, 179, 0.55) 0%, rgba(79, 127, 179, 0.18) 45%, transparent 75%);
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.logo-halo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 0 8px rgba(79, 127, 179, 0.6)) brightness(1.1);
-}
-
-.logo-fallback {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  color: var(--branco);
-  letter-spacing: -1px;
-  position: relative;
-  z-index: 1;
-}
-
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo-area { display: flex; align-items: center; gap: 14px; }
+.logo-halo { position: relative; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logo-halo::before { content: ''; position: absolute; inset: -14px; background: radial-gradient(circle, rgba(79, 127, 179, 0.4) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+.logo-halo img { width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 1; filter: drop-shadow(0 0 8px rgba(79, 127, 179, 0.5)) brightness(1.1); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-name { font-weight: 700; font-size: 16px; color: var(--branco); }
 .brand-product { font-size: 11px; color: var(--azul-claro); font-weight: 600; letter-spacing: 1.5px; }
-
 nav ul { display: flex; gap: 24px; list-style: none; }
-nav a { color: var(--cinza-claro); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
+nav a { color: var(--branco); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
 nav a:hover { color: var(--azul-claro); }
 
-/* ===== HERO ===== */
-.hero {
-  padding: 160px 0 100px;
-  background: linear-gradient(180deg, var(--azul-institucional) 0%, var(--azul-medio) 100%);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+/* ===== BOTÕES E SEÇÕES GERAIS ===== */
+.btn-demo-hero { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; cursor: pointer; background: var(--azul-institucional); color: var(--branco); border: none; }
+.btn-demo-hero:hover { background: var(--azul-tecnico); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(46, 90, 136, 0.3); }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(46, 90, 136, 0.25) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.hero .container { position: relative; z-index: 1; }
-
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--azul-claro);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding: 8px 16px;
-  border: 1px solid var(--borda);
-  border-radius: 20px;
-  background: rgba(46, 90, 136, 0.15);
-}
-
-.hero h1 {
-  font-size: 54px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  color: var(--branco);
-  letter-spacing: -1.2px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: var(--cinza-metalico);
-  max-width: 720px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary { background: var(--azul-tecnico); color: var(--branco); }
-.btn-primary:hover {
-  background: var(--azul-claro);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79, 127, 179, 0.35);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--cinza-claro);
-  border: 1px solid var(--borda);
-}
-.btn-secondary:hover { border-color: var(--azul-claro); color: var(--branco); }
-
-.btn-demo-hero {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
-  border: 1px solid var(--azul-claro);
-  background: rgba(46, 90, 136, 0.2);
-  color: var(--branco);
-}
-.btn-demo-hero:hover {
-  border-color: var(--branco);
-  background: rgba(46, 90, 136, 0.35);
-  transform: translateY(-2px);
-}
-
-/* ===== SEÇÕES ===== */
 section { padding: 80px 0; }
+.section-title { font-size: 36px; font-weight: 800; margin-bottom: 16px; color: var(--azul-institucional); letter-spacing: -0.5px; text-align: center; }
+.section-subtitle { font-size: 17px; color: var(--cinza-metalico); text-align: center; max-width: 680px; margin: 0 auto 56px; line-height: 1.7; }
 
-.section-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--branco);
-  letter-spacing: -0.5px;
-  text-align: center;
-}
+/* ===== HERO ===== */
+.hero { padding: 160px 0 100px; background: var(--branco); border-bottom: 1px solid var(--borda); }
+.hero .container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; }
+.hero-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--azul-tecnico); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; padding: 6px 16px; border: 1px solid var(--borda); border-radius: 20px; background: var(--azul-suave); }
+.hero h1 { font-size: 42px; text-align: left; margin-bottom: 20px; color: var(--azul-institucional); line-height: 1.1; }
+.hero h1 span { color: var(--azul-tecnico); }
+.hero p { text-align: left; margin: 0 0 30px 0; font-size: 17px; color: var(--cinza-metalico); }
+.hero-buttons { justify-content: flex-start; }
+.hero-foto { flex: 0 0 300px; display: flex; justify-content: center; }
+.hero-foto img { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid var(--azul-suave); box-shadow: 0 10px 30px rgba(15, 34, 51, 0.1); object-fit: cover; object-position: center 15%; }
 
-.section-subtitle {
-  font-size: 17px;
-  color: var(--cinza-metalico);
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 56px;
-  line-height: 1.7;
-}
+/* ===== FRASE DE IMPACTO ===== */
+.impacto { background: var(--azul-institucional); padding: 60px 0; text-align: center; color: var(--branco); }
+.impacto p { font-size: 22px; font-style: italic; max-width: 820px; margin: 0 auto 16px; line-height: 1.6; }
+.impacto span { font-size: 14px; font-weight: 600; color: var(--azul-claro); letter-spacing: 1px; text-transform: uppercase; }
 
-/* ===== SOBRE ===== */
-.sobre { background: var(--azul-institucional); }
-.sobre-content {
-  max-width: 820px;
-  margin: 0 auto;
-  font-size: 16px;
-  color: var(--cinza-metalico);
-  line-height: 1.8;
-}
-.sobre-content p { margin-bottom: 20px; }
-.sobre-content strong { color: var(--branco); }
-.sobre-credenciais {
-  margin-top: 32px;
-  padding: 24px;
-  background: rgba(46, 90, 136, 0.15);
-  border-radius: 8px;
-  border-left: 3px solid var(--azul-claro);
-  font-size: 14px;
-  color: var(--cinza-claro);
-  line-height: 1.7;
-}
-
-/* ===== PROBLEMA / SINAIS DE ALERTA ===== */
-.problema { background: var(--azul-medio); }
-.problema-list { list-style: none; max-width: 820px; margin: 0 auto; }
-.problema-list li {
-  padding: 16px 20px;
-  background: rgba(15, 34, 51, 0.6);
-  border-left: 3px solid var(--vermelho);
-  margin-bottom: 12px;
-  border-radius: 6px;
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  font-size: 15px;
-}
-.problema-list li span.icon {
-  color: var(--vermelho);
-  flex-shrink: 0;
-  font-size: 24px; /* Tamanho ajustado para os ícones */
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px; /* Alinha o ícone com a primeira linha do texto */
-}
-.problema-fechamento {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--branco);
-  padding: 24px;
-  background: rgba(46, 90, 136, 0.2);
-  border-radius: 8px;
-  border: 1px solid var(--borda);
-  max-width: 820px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== COMO FUNCIONA / MÉTODO ===== */
-.passos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-.passo-card {
-  background: var(--azul-medio);
-  padding: 28px;
-  border-radius: 10px;
-  border: 1px solid var(--borda);
-  transition: transform 0.2s, border-color 0.2s;
-}
-.passo-card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
-.passo-numero {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--azul-claro);
-  margin-bottom: 12px;
-  font-family: 'Montserrat', sans-serif;
-}
-.passo-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--branco); font-weight: 700; }
-.passo-card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
-
-.fluxo {
-  margin-top: 48px;
-  padding: 24px;
-  background: rgba(46, 90, 136, 0.15);
-  border-radius: 10px;
-  border: 1px solid var(--borda);
-  text-align: center;
-  font-size: 13px;
-  color: var(--cinza-claro);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-/* ===== FUNCIONALIDADES / FERRAMENTAS ===== */
-.funcionalidades { background: var(--azul-medio); }
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-.card {
-  background: var(--azul-institucional);
-  padding: 28px;
-  border-radius: 10px;
-  border: 1px solid var(--borda);
-  transition: transform 0.2s, border-color 0.2s;
-}
-.card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
-.card-icon {
-  font-size: 26px;
-  margin-bottom: 16px;
-  display: block;
-  color: var(--azul-claro);
-  font-weight: 700;
-}
-.card h3 { font-size: 16px; margin-bottom: 10px; color: var(--branco); font-weight: 700; }
-.card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
-
-/* ===== PARA QUEM ===== */
-.para-quem-content { max-width: 820px; margin: 0 auto; text-align: center; }
-.para-quem-content > p {
-  font-size: 17px;
-  color: var(--cinza-metalico);
-  margin-bottom: 32px;
-  line-height: 1.7;
-}
-.lista-publico {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.lista-publico li {
-  padding: 16px 20px;
-  background: var(--azul-medio);
-  border-radius: 8px;
-  border: 1px solid var(--borda);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--cinza-claro);
-  text-align: left;
-  transition: border-color 0.2s;
-}
-.lista-publico li:hover { border-color: var(--azul-claro); }
-
-/* ===== DIFERENCIAIS ===== */
-.diferenciais { background: var(--azul-medio); }
-.diferenciais-list {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.diferencial-item {
-  display: flex;
-  gap: 20px;
-  padding: 24px;
-  background: var(--azul-institucional);
-  border-radius: 10px;
-  border-left: 3px solid var(--azul-claro);
-  transition: transform 0.2s;
-}
-.diferencial-item:hover { transform: translateX(4px); }
-.diferencial-numero {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--azul-claro);
-  flex-shrink: 0;
-  min-width: 36px;
-  font-family: 'Montserrat', sans-serif;
-  padding-top: 2px;
-}
-.diferencial-item h3 { font-size: 16px; margin-bottom: 6px; color: var(--branco); font-weight: 700; }
-.diferencial-item p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
-
-/* ===== DEPOIMENTOS ===== */
-.depoimentos { background: var(--azul-institucional); }
-.depoimentos-placeholder {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 60px 32px;
-  text-align: center;
-  background: var(--azul-medio);
-  border-radius: 12px;
-  border: 1px dashed var(--azul-claro);
-}
-.depoimentos-placeholder .icon-placeholder {
-  font-size: 48px;
-  margin-bottom: 20px;
-  display: block;
-  color: var(--azul-claro);
-  opacity: 0.6;
-}
-.depoimentos-placeholder h3 {
-  font-size: 20px;
-  color: var(--branco);
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-.depoimentos-placeholder p {
-  font-size: 15px;
-  color: var(--cinza-metalico);
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-/* ===== FAQ ===== */
-.faq { background: var(--azul-medio); }
-.faq-list {
-  max-width: 900px;
-  margin: 40px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.faq-item {
-  background: var(--azul-institucional);
-  border: 1px solid var(--borda);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: border-color 0.2s;
-}
-.faq-item:hover { border-color: var(--azul-claro); }
-.faq-item summary {
-  cursor: pointer;
-  padding: 20px 56px 20px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--branco);
-  list-style: none;
-  position: relative;
-  transition: color 0.2s;
-}
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
-  content: '+';
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 22px;
-  font-weight: 300;
-  color: var(--azul-claro);
-  transition: transform 0.2s;
-}
-.faq-item[open] summary::after { content: '−'; }
-.faq-item[open] summary { color: var(--azul-claro); }
-.faq-item .faq-resposta {
-  padding: 0 24px 20px;
-  font-size: 14px;
-  color: var(--cinza-metalico);
-  line-height: 1.7;
-}
-.faq-item .faq-resposta p { margin-bottom: 10px; }
-.faq-item .faq-resposta p:last-child { margin-bottom: 0; }
-.faq-item .faq-resposta strong { color: var(--cinza-claro); }
-
-/* ===== CTA DEMONSTRAÇÃO ===== */
-.cta-demo {
-  background: linear-gradient(135deg, var(--azul-medio) 0%, var(--azul-tecnico) 100%);
-  text-align: center;
-}
-.cta-demo h2 {
-  font-size: 32px;
-  color: var(--branco);
-  font-weight: 700;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
-}
-.cta-demo p {
-  font-size: 17px;
-  color: rgba(244, 246, 248, 0.85);
-  max-width: 640px;
-  margin: 0 auto 32px;
-  line-height: 1.7;
-}
-.cta-demo .btn-demo-hero {
-  background: var(--branco);
-  color: var(--azul-institucional);
-  border: 2px solid var(--branco);
-  font-size: 16px;
-  padding: 18px 40px;
-}
-.cta-demo .btn-demo-hero:hover {
-  background: var(--azul-claro);
-  border-color: var(--azul-claro);
-  color: var(--branco);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== CONTATO ===== */
-.contato-form {
-  max-width: 600px;
-  margin: 40px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.contato-form label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--cinza-claro);
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
-}
-.contato-form input,
-.contato-form textarea {
-  width: 100%;
-  padding: 14px 16px;
-  background: var(--azul-medio);
-  border: 1px solid var(--borda);
-  border-radius: 8px;
-  color: var(--branco);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.contato-form input:focus,
-.contato-form textarea:focus {
-  outline: none;
-  border-color: var(--azul-claro);
-  box-shadow: 0 0 0 3px rgba(79, 127, 179, 0.2);
-}
-.contato-form textarea { resize: vertical; min-height: 140px; }
-.contato-form button {
-  padding: 16px 32px;
-  background: var(--azul-tecnico);
-  color: var(--branco);
-  border: none;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.contato-form button:hover {
-  background: var(--azul-claro);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79, 127, 179, 0.35);
-}
-.form-obrigatorio {
-  font-size: 13px;
-  color: var(--cinza-metalico);
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-  background: var(--azul-institucional);
-  border-top: 1px solid var(--borda);
-  padding: 48px 0 32px;
-}
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-bottom: 32px;
-}
-.footer-brand { display: flex; align-items: center; gap: 14px; }
-.footer-brand .logo-halo { width: 42px; height: 42px; }
-.footer-brand-text { display: flex; flex-direction: column; }
-.footer-brand-name { font-weight: 700; font-size: 15px; color: var(--branco); }
-.footer-brand-tag { font-size: 12px; color: var(--cinza-metalico); }
-.footer-contato { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
-.footer-contato a { color: var(--cinza-metalico); text-decoration: none; transition: color 0.2s; }
-.footer-contato a:hover { color: var(--azul-claro); }
-.footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
-.footer-links a {
-  color: var(--cinza-metalico);
-  text-decoration: none;
-  font-size: 13px;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: var(--azul-claro); }
-.footer-bottom {
-  border-top: 1px solid var(--borda);
-  padding-top: 24px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--cinza-metalico);
-}
-.footer-bottom p { margin-bottom: 4px; }
-
-/* ===== WHATSAPP FLUTUANTE ===== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-  z-index: 1000;
-  transition: all 0.3s;
-  text-decoration: none;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
-}
-.whatsapp-float svg { width: 32px; height: 32px; fill: var(--branco); }
-
-/* ===== NOVOS ESTILOS E RESPONSIVIDADE ===== */
-.prova-numeros { background: var(--azul-institucional); padding: 40px 0; border-bottom: 1px solid var(--borda); }
-.grid-numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 16px; text-align: center; }
-.numero-destaque { font-size: 36px; font-weight: 800; color: var(--azul-claro); line-height: 1.1; margin-bottom: 6px; }
+/* ===== PROVA SOCIAL (KPIs) ===== */
+.prova-numeros { background: var(--cinza-claro); padding: 60px 0; }
+.grid-numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; }
+.stat-item { background: var(--branco); padding: 32px 20px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s; }
+.stat-item:hover { transform: translateY(-5px); border-color: var(--azul-claro); }
+.stat-icon { font-size: 32px; color: var(--azul-tecnico); margin-bottom: 12px; display: block; }
+.numero-destaque { font-size: 38px; font-weight: 800; color: var(--azul-institucional); line-height: 1.1; margin-bottom: 8px; }
 .numero-label { font-size: 12px; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-.obras { background: var(--azul-medio); padding: 60px 0; }
-.grid-fotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
-.foto-card { background: var(--azul-institucional); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s; }
-.foto-card:hover { transform: translateY(-4px); border-color: var(--azul-claro); }
-.foto-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
-.foto-legenda { padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--branco); }
+/* ===== SOBRE E COMPETÊNCIAS ===== */
+.sobre { background: var(--branco); }
+.sobre-content { max-width: 820px; margin: 0 auto; font-size: 16px; color: var(--cinza-metalico); line-height: 1.8; }
+.sobre-content p { margin-bottom: 20px; }
+.sobre-content strong { color: var(--azul-institucional); }
+.competencias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px; }
+.competencia-card { background: var(--cinza-claro); padding: 24px; border-radius: 8px; border-left: 3px solid var(--azul-tecnico); }
+.competencia-card h4 { color: var(--azul-institucional); font-size: 15px; margin-bottom: 8px; font-weight: 700; }
+.competencia-card p { font-size: 13px; color: var(--cinza-metalico); margin: 0; }
+.auditoria-box { background: var(--azul-suave); padding: 24px; border-radius: 8px; border: 1px solid var(--borda); margin-top: 24px; }
+.auditoria-box h3 { color: var(--azul-institucional); font-size: 16px; margin-bottom: 12px; }
+.auditoria-box ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 14px; color: var(--texto-escuro); font-weight: 500; }
+.auditoria-box li i { color: var(--azul-tecnico); margin-right: 8px; }
+.auditoria-box .citacao { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-style: italic; font-size: 13px; color: var(--cinza-metalico); }
 
-.citacao-auditoria { background: var(--azul-institucional); padding: 60px 0; }
-.citacao-texto { font-size: 20px; font-style: italic; color: var(--cinza-claro); line-height: 1.6; margin-bottom: 20px; text-align: center; }
-.citacao-fonte { font-size: 13px; font-weight: 600; color: var(--azul-claro); letter-spacing: 1px; text-transform: uppercase; text-align: center; display: block; }
+/* ===== SINAIS DE ALERTA ===== */
+.problema { background: var(--cinza-claro); }
+.problema-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+.alerta-card { background: var(--branco); padding: 24px; border-radius: 8px; border-top: 4px solid var(--vermelho); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; }
+.alerta-icon { font-size: 28px; color: var(--vermelho); margin-bottom: 16px; display: block; }
+.alerta-card p { font-size: 14px; color: var(--texto-escuro); font-weight: 500; margin: 0; line-height: 1.5; }
+.problema-fechamento { text-align: center; margin-top: 40px; font-size: 17px; font-weight: 600; color: var(--azul-institucional); padding: 24px; background: var(--azul-suave); border-radius: 8px; max-width: 820px; margin-left: auto; margin-right: auto; }
 
-/* Responsividade */
+/* ===== MÉTODO E FLUXO ===== */
+#metodo { background: var(--branco); }
+.passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.passo-card { background: var(--cinza-claro); padding: 28px; border-radius: 10px; border: 1px solid var(--borda); transition: all 0.2s; }
+.passo-card:hover { transform: translateY(-4px); border-color: var(--azul-claro); background: var(--branco); box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+.icone-animado { font-size: 36px; color: var(--azul-tecnico); margin-bottom: 16px; display: block; transition: all 0.3s ease; }
+.passo-card:hover .icone-animado, .card:hover .icone-animado { transform: translateY(-5px) scale(1.1); color: var(--azul-institucional); }
+.passo-numero { font-size: 24px; font-weight: 800; color: var(--azul-suave); margin-bottom: 8px; font-family: 'Montserrat', sans-serif; -webkit-text-stroke: 1px var(--azul-tecnico); }
+.passo-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--azul-institucional); font-weight: 700; }
+.passo-card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+/* Fluxo Timeline */
+.fluxo-timeline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 60px; position: relative; }
+.fluxo-timeline::before { content: ''; position: absolute; top: 30px; left: 5%; right: 5%; height: 2px; background: var(--azul-suave); z-index: 0; }
+.fluxo-passo { display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1; min-width: 100px; z-index: 1; }
+.fluxo-icone { width: 60px; height: 60px; background: var(--branco); border: 2px solid var(--azul-tecnico); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--azul-tecnico); box-shadow: 0 4px 12px rgba(46, 90, 136, 0.15); }
+.fluxo-passo span { font-size: 13px; font-weight: 700; color: var(--azul-institucional); text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+.fluxo-seta { color: var(--borda); font-size: 24px; z-index: 1; }
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais { background: var(--cinza-claro); }
+.diferenciais-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.diferencial-item { display: flex; gap: 20px; padding: 24px; background: var(--branco); border-radius: 10px; border-left: 4px solid var(--azul-tecnico); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+.diferencial-numero { font-size: 18px; font-weight: 800; color: var(--azul-tecnico); flex-shrink: 0; min-width: 36px; }
+.diferencial-item h3 { font-size: 16px; margin-bottom: 6px; color: var(--azul-institucional); font-weight: 700; }
+.diferencial-item p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+/* ===== FERRAMENTAS ===== */
+.funcionalidades { background: var(--branco); }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.card { background: var(--cinza-claro); padding: 28px; border-radius: 10px; border: 1px solid var(--borda); transition: all 0.2s; }
+.card:hover { transform: translateY(-4px); border-color: var(--azul-claro); background: var(--branco); box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+.card h3 { font-size: 16px; margin-bottom: 10px; color: var(--azul-institucional); font-weight: 700; }
+.card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
+
+/* ===== COMO POSSO ATUAR / PARA QUEM ===== */
+#como-atuar { background: var(--cinza-claro); }
+#para-quem { background: var(--branco); }
+.para-quem-content { max-width: 820px; margin: 0 auto; text-align: center; }
+.lista-publico { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 720px; margin: 32px auto 0; }
+.lista-publico li { padding: 16px 20px; background: var(--cinza-claro); border-radius: 8px; border: 1px solid var(--borda); font-size: 14px; font-weight: 600; color: var(--azul-institucional); text-align: left; }
+
+/* ===== FAQ ===== */
+.faq { background: var(--cinza-claro); }
+.faq-list { max-width: 900px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--branco); border: 1px solid var(--borda); border-radius: 10px; overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: 20px 56px 20px 24px; font-size: 15px; font-weight: 700; color: var(--azul-institucional); list-style: none; position: relative; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 300; color: var(--azul-tecnico); }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-resposta { padding: 0 24px 20px; font-size: 14px; color: var(--cinza-metalico); line-height: 1.7; }
+.faq-item .faq-resposta strong { color: var(--azul-institucional); }
+
+/* ===== CONTATO E RODAPÉ ===== */
+.cta-demo { background: var(--azul-institucional); text-align: center; padding: 60px 0; }
+.cta-demo h2 { font-size: 32px; color: var(--branco); font-weight: 700; margin-bottom: 16px; }
+.cta-demo p { font-size: 17px; color: var(--azul-suave); max-width: 640px; margin: 0 auto 32px; }
+.cta-demo .btn-demo-hero { background: var(--azul-claro); color: var(--branco); border: 2px solid var(--azul-claro); }
+.cta-demo .btn-demo-hero:hover { background: var(--branco); border-color: var(--branco); color: var(--azul-institucional); }
+
+#contato { background: var(--branco); }
+.contato-form { max-width: 600px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 20px; }
+.contato-form label { display: block; font-size: 13px; font-weight: 700; color: var(--azul-institucional); margin-bottom: 8px; }
+.contato-form input, .contato-form textarea { width: 100%; padding: 14px 16px; background: var(--cinza-claro); border: 1px solid var(--borda); border-radius: 8px; color: var(--texto-escuro); font-family: 'Montserrat', sans-serif; font-size: 15px; transition: border-color 0.2s; }
+.contato-form input:focus, .contato-form textarea:focus { outline: none; border-color: var(--azul-tecnico); background: var(--branco); box-shadow: 0 0 0 3px rgba(46, 90, 136, 0.1); }
+.contato-form button { padding: 16px 32px; background: var(--azul-tecnico); color: var(--branco); border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.contato-form button:hover { background: var(--azul-institucional); transform: translateY(-2px); }
+
+footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,255,255,0.1); padding: 48px 0 32px; color: var(--branco); }
+.footer-content { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; margin-bottom: 32px; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-brand-name { font-weight: 700; font-size: 15px; color: var(--branco); }
+.footer-brand-tag { font-size: 12px; color: var(--azul-suave); }
+.footer-contato a { color: var(--azul-suave); text-decoration: none; font-size: 14px; margin-bottom: 8px; display: block; }
+.footer-contato a:hover { color: var(--branco); }
+.footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+.footer-links a { color: var(--azul-suave); text-decoration: none; font-size: 13px; }
+.footer-links a:hover { color: var(--branco); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; font-size: 13px; color: var(--azul-suave); }
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); z-index: 1000; transition: all 0.3s; }
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 900px) {
   nav ul { display: none; }
-  .hero h1 { font-size: 38px; }
-  .passos, .cards-grid, .lista-publico, .grid-fotos { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 32px; }
+  .hero-foto { flex: 0 0 100%; margin-top: 30px; }
+  .hero-foto img { width: 220px; height: 220px; }
+  .passos, .cards-grid, .problema-grid, .grid-fotos, .lista-publico { grid-template-columns: 1fr; }
   .grid-numeros { grid-template-columns: repeat(2, 1fr); }
-  .footer-content { flex-direction: column; align-items: flex-start; }
-  .section-title { font-size: 28px; }
-  .cta-demo h2 { font-size: 26px; }
+  .footer-content { flex-direction: column; }
+  .fluxo-timeline { flex-direction: column; gap: 20px; }
+  .fluxo-timeline::before { display: none; }
+  .fluxo-seta { transform: rotate(90deg); margin: 10px 0; }
+  .auditoria-box ul { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .hero { padding: 130px 0 60px; }
-  .hero h1 { font-size: 30px; letter-spacing: -0.5px; }
-  .hero p { font-size: 15px; }
-  .section-title { font-size: 24px; }
-  .section-subtitle { font-size: 15px; margin-bottom: 40px; }
-  section { padding: 56px 0; }
-  .btn, .btn-demo-hero { width: 100%; text-align: center; }
-  .hero-buttons { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
-  .whatsapp-float { bottom: 80px; right: 16px; width: 54px; height: 54px; }
-  .whatsapp-float svg { width: 28px; height: 28px; }
-  .container { padding: 0 20px; }
-  .faq-item summary { font-size: 14px; padding: 16px 48px 16px 20px; }
-  .faq-item .faq-resposta { font-size: 13.5px; padding: 0 20px 16px; }
-  .depoimentos-placeholder { padding: 40px 20px; }
-  .cta-demo h2 { font-size: 22px; }
-  .grid-numeros { grid-template-columns: 1fr; gap: 24px; }
-  .numero-destaque { font-size: 32px; }
+  .hero h1 { font-size: 28px; }
+  .grid-numeros { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .btn-demo-hero { width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -751,8 +254,7 @@ footer {
   <div class="container header-content">
     <div class="logo-area">
       <div class="logo-halo">
-        <img src="https://mpsmdem-estrela.github.io/MP_Servicos/logo.png" alt="MP Serviços" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="logo-fallback" style="display:none;">MP</span>
+        <img src="https://mpsmdem-estrela.github.io/MP_Servicos/logo.png" alt="MP Serviços">
       </div>
       <div class="brand-text">
         <span class="brand-name">MP Serviços</span>
@@ -772,133 +274,106 @@ footer {
   </div>
 </header>
 
-<!-- ===== HERO (SLIDE 1) ===== -->
-<section class="hero" style="padding: 140px 0 80px;">
-  <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center;">
-    
-    <!-- Texto do Hero -->
-    <div style="flex: 1; min-width: 300px; text-align: left;">
-      <span class="hero-eyebrow">MP Serviços · Gestão Condominial Profissional</span>
-      <h1 style="font-size: 42px; text-align: left; margin-bottom: 20px;">Tá precisando de síndico profissional?<br><span style="color: var(--azul-claro);">Formação para servir e experiência para resolver.</span></h1>
-      <p style="text-align: left; margin: 0 0 30px 0; font-size: 17px;">Gestão condominial com profissionalismo, método, rigor financeiro e transparência — do diagnóstico à contabilização, nada fica descoberto.</p>
-      <div class="hero-buttons" style="justify-content: flex-start;">
-        <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20condom%C3%ADnio" class="btn-demo-hero" target="_blank" rel="noopener" style="background: var(--azul-claro); border-color: var(--azul-claro);">Agendar diagnóstico no WhatsApp</a>
-      </div>
-    </div>
-
-    <!-- Foto do Michell -->
-    <div style="flex: 0 0 300px; display: flex; justify-content: center;">
-      <div style="width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 4px solid var(--azul-claro); box-shadow: 0 10px 30px rgba(79, 127, 179, 0.3); position: relative;">
-        <!-- O object-fit: cover e o posicionamento garantem o corte da camiseta -->
-        <img src="assets/img/michell-perfil.jpg" alt="Michell Patrick - Síndico Profissional" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%;">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== TRANSIÇÃO / FRASE DE IMPACTO (SLIDE 2 e 4) ===== -->
-<section style="background: var(--azul-medio); padding: 60px 0; text-align: center; border-bottom: 1px solid var(--borda); border-top: 1px solid var(--borda);">
-  <div class="container" style="max-width: 820px;">
-    <p style="font-size: 22px; font-style: italic; color: var(--cinza-claro); line-height: 1.6; margin-bottom: 16px;">
-      "Condomínio é como um rio: não importa o tamanho, deve fluir tranquilamente. Meu trabalho é garantir que isso aconteça por meio de uma gestão eficiente. Gerenciando recursos e processos para promover qualidade de vida aos condôminos."
-    </p>
-    <p style="font-size: 14px; font-weight: 600; color: var(--azul-claro); letter-spacing: 1px; text-transform: uppercase;">
-      Transformando propósitos em resultados.
-    </p>
-  </div>
-</section>
-
-<!-- ===== PROVA SOCIAL (SLIDE 3) ===== -->
-<section class="obras" style="padding: 60px 0;">
+<!-- ===== HERO ===== -->
+<section class="hero">
   <div class="container">
-    <div style="text-align: center; margin-bottom: 40px;">
-      <!-- Logo do Antúrio -->
-      <img src="assets/img/logo-anturio.png" alt="Condomínio Jardim Paradiso Antúrio" style="height: 60px; width: auto; margin-bottom: 16px; display: inline-block;">
-      <h2 class="section-title">Resultados em campo</h2>
-      <p class="section-subtitle">O método aplicado na prática no Condomínio Jardim Paradiso Antúrio.</p>
+    <div style="flex: 1; min-width: 300px;">
+      <span class="hero-eyebrow">MP Serviços · Gestão Condominial Profissional</span>
+      <h1>Tá precisando de síndico profissional?<br><span>Formação para servir e experiência para resolver.</span></h1>
+      <p>Gestão condominial com profissionalismo, método, rigor financeiro e transparência — do diagnóstico à contabilização, nada fica descoberto.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20do%20meu%20condom%C3%ADnio" class="btn-demo-hero" target="_blank" rel="noopener">Agendar diagnóstico no WhatsApp</a>
+      </div>
     </div>
-
-    <div class="grid-numeros" style="margin-bottom: 40px;">
-      <div><div class="numero-destaque">R$ 36 mil</div><div class="numero-label">Economizados / ano</div></div>
-      <div><div class="numero-destaque">26</div><div class="numero-label">Blocos impermeabilizados</div></div>
-      <div><div class="numero-destaque">100%</div><div class="numero-label">Dos blocos com CFTV</div></div>
-      <div><div class="numero-destaque">0</div><div class="numero-label">Aumento de taxa (4 anos)</div></div>
-      <div><div class="numero-destaque">30%</div><div class="numero-label">Receita extra (inadimplência)</div></div>
-      <div><div class="numero-destaque">4 anos</div><div class="numero-label">Gestão no Antúrio</div></div>
-    </div>
-
-    <div class="grid-fotos">
-      <div class="foto-card">
-        <img src="assets/img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy">
-        <div class="foto-legenda">Portaria revitalizada</div>
-      </div>
-      <div class="foto-card">
-        <img src="assets/img/piscina.jpg" alt="Piscina reformada com piso novo do Condomínio Jardim Paradiso Antúrio" loading="lazy">
-        <div class="foto-legenda">Piscina com piso novo</div>
-      </div>
-      <div class="foto-card">
-        <img src="assets/img/quadra_poliesportiva.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy">
-        <div class="foto-legenda">Quadra poliesportiva</div>
-      </div>
+    <div class="hero-foto">
+      <img src="assets/img/michell-perfil.jpg" alt="Michell Patrick - Síndico Profissional">
     </div>
   </div>
 </section>
 
-<!-- ===== SOBRE + COMPETÊNCIAS (SLIDE 5) ===== -->
+<!-- ===== FRASE DE IMPACTO ===== -->
+<section class="impacto">
+  <div class="container">
+    <p>"Condomínio é como um rio: não importa o tamanho, deve fluir tranquilamente. Meu trabalho é garantir que isso aconteça por meio de uma gestão eficiente. Gerenciando recursos e processos para promover qualidade de vida aos condôminos."</p>
+    <span>Transformando propósitos em resultados.</span>
+  </div>
+</section>
+
+<!-- ===== PROVA SOCIAL (KPIs) ===== -->
+<section class="prova-numeros">
+  <div class="container">
+    <div class="grid-numeros">
+      <div class="stat-item"><i class="ph-bold ph-currency-circle-dollar stat-icon"></i><div class="numero-destaque">R$ 36 mil</div><div class="numero-label">Economizados / ano</div></div>
+      <div class="stat-item"><i class="ph-bold ph-buildings stat-icon"></i><div class="numero-destaque">26</div><div class="numero-label">Blocos impermeabilizados</div></div>
+      <div class="stat-item"><i class="ph-bold ph-video-camera stat-icon"></i><div class="numero-destaque">100%</div><div class="numero-label">Dos blocos com CFTV</div></div>
+      <div class="stat-item"><i class="ph-bold ph-chart-line-down stat-icon"></i><div class="numero-destaque">0</div><div class="numero-label">Aumento de taxa (4 anos)</div></div>
+      <div class="stat-item"><i class="ph-bold ph-coins stat-icon"></i><div class="numero-destaque">30%</div><div class="numero-label">Receita extra (inadimplência)</div></div>
+      <div class="stat-item"><i class="ph-bold ph-calendar-check stat-icon"></i><div class="numero-destaque">4 anos</div><div class="numero-label">Gestão no Antúrio</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOBRE + COMPETÊNCIAS ===== -->
 <section class="sobre" id="sobre">
   <div class="container">
     <h2 class="section-title">Sobre Michell Patrick</h2>
     <div class="sobre-content">
       <p>Administrador com mais de <strong>20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor. Formou-se síndico profissional e em administração de condomínios, antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal.</p>
-      
       <p>Um gestor que se tornou síndico, que construiu sua trajetória transformando propósitos em lucros nas indústrias, doações em projetos sociais no terceiro setor e cotas condominiais em qualidade de vida. Não trabalho com "achismos" — cada decisão tem método, lastro técnico e respaldo documental.</p>
 
-      <!-- Bloco de Competências -->
       <div style="margin: 40px 0;">
-        <h3 style="font-size: 18px; color: var(--branco); margin-bottom: 8px; text-align: center;">Formação para servir. Experiência para resolver.</h3>
+        <h3 style="font-size: 18px; color: var(--azul-institucional); margin-bottom: 8px; text-align: center;">Formação para servir. Experiência para resolver.</h3>
         <p style="font-size: 14px; color: var(--cinza-metalico); text-align: center; margin-bottom: 24px;">Possuo uma formação para cada necessidade e uma experiência para cada desafio.</p>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-          <div style="background: rgba(46, 90, 136, 0.15); padding: 20px; border-radius: 8px; border-left: 3px solid var(--azul-claro);">
-            <h4 style="color: var(--branco); font-size: 15px; margin-bottom: 8px;">Governança e Compliance</h4>
-            <p style="font-size: 13px; color: var(--cinza-metalico); margin: 0;">Gestão do condomínio como empresa, com regras claras e decisões respaldadas.</p>
-          </div>
-          <div style="background: rgba(46, 90, 136, 0.15); padding: 20px; border-radius: 8px; border-left: 3px solid var(--azul-claro);">
-            <h4 style="color: var(--branco); font-size: 15px; margin-bottom: 8px;">Gestão de Pessoas</h4>
-            <p style="font-size: 13px; color: var(--cinza-metalico); margin: 0;">Lidar com condôminos, gerir convivência e resolver conflitos com equilíbrio.</p>
-          </div>
-          <div style="background: rgba(46, 90, 136, 0.15); padding: 20px; border-radius: 8px; border-left: 3px solid var(--azul-claro);">
-            <h4 style="color: var(--branco); font-size: 15px; margin-bottom: 8px;">Gestão da Qualidade</h4>
-            <p style="font-size: 13px; color: var(--cinza-metalico); margin: 0;">Garantir que toda documentação técnica esteja de acordo com as normas.</p>
-          </div>
-          <div style="background: rgba(46, 90, 136, 0.15); padding: 20px; border-radius: 8px; border-left: 3px solid var(--azul-claro);">
-            <h4 style="color: var(--branco); font-size: 15px; margin-bottom: 8px;">Finanças e Auditoria</h4>
-            <p style="font-size: 13px; color: var(--cinza-metalico); margin: 0;">Saúde financeira, aplicação correta e transparência total dos recursos.</p>
-          </div>
-          <div style="background: rgba(46, 90, 136, 0.15); padding: 20px; border-radius: 8px; border-left: 3px solid var(--azul-claro);">
-            <h4 style="color: var(--branco); font-size: 15px; margin-bottom: 8px;">Gestão de Projetos</h4>
-            <p style="font-size: 13px; color: var(--cinza-metalico); margin: 0;">Fluidez nos processos e eficiência na realização de obras e melhorias.</p>
-          </div>
+        <div class="competencias-grid">
+          <div class="competencia-card"><h4>Governança e Compliance</h4><p>Gestão do condomínio como empresa, com regras claras e decisões respaldadas.</p></div>
+          <div class="competencia-card"><h4>Gestão de Pessoas</h4><p>Lidar com condôminos, gerir convivência e resolver conflitos com equilíbrio.</p></div>
+          <div class="competencia-card"><h4>Gestão da Qualidade</h4><p>Garantir que toda documentação técnica esteja de acordo com as normas.</p></div>
+          <div class="competencia-card"><h4>Finanças e Auditoria</h4><p>Saúde financeira, aplicação correta e transparência total dos recursos.</p></div>
+          <div class="competencia-card"><h4>Gestão de Projetos</h4><p>Fluidez nos processos e eficiência na realização de obras e melhorias.</p></div>
         </div>
       </div>
 
-      <!-- Bloco Terceiro Setor (Autoridade) -->
-      <div style="background: rgba(15, 34, 51, 0.6); padding: 24px; border-radius: 8px; border: 1px solid var(--borda); margin-top: 24px;">
-        <h3 style="font-size: 16px; margin-bottom: 12px; color: var(--branco);">Experiência comprovada em auditoria e governança</h3>
-        <p style="font-size: 14px; margin-bottom: 16px; color: var(--cinza-metalico);">Atuação de 3 anos e 7 meses em gestão administrativa e financeira no terceiro setor, com:</p>
-        <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; color: var(--cinza-claro);">
-          <li>✔️ +R$ 35 milhões aplicados</li>
-          <li>✔️ 10 auditorias externas aprovadas</li>
-          <li>✔️ 148 prestações de contas aprovadas</li>
-          <li>✔️ 6 processos e 3 políticas implementadas</li>
+      <div class="auditoria-box">
+        <h3><i class="ph-bold ph-seal-check" style="margin-right: 8px;"></i> Experiência comprovada em auditoria e governança</h3>
+        <p style="font-size: 14px; margin-bottom: 16px;">Atuação de 3 anos e 7 meses em gestão administrativa e financeira no terceiro setor, com:</p>
+        <ul>
+          <li><i class="ph-bold ph-check"></i> +R$ 35 milhões aplicados</li>
+          <li><i class="ph-bold ph-check"></i> 10 auditorias externas aprovadas</li>
+          <li><i class="ph-bold ph-check"></i> 148 prestações de contas aprovadas</li>
+          <li><i class="ph-bold ph-check"></i> 6 processos e 3 políticas implementadas</li>
         </ul>
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-style: italic; font-size: 13px; color: var(--cinza-metalico);">
+        <div class="citacao">
           "Efetuamos análise nas operações realizadas no período e verificamos que as operações foram contabilizadas de forma adequada, demonstrando uma situação satisfatória de gerenciamento das contas contábeis." 
-          <span style="font-size: 11px; font-weight: 600; color: var(--azul-claro); font-style: normal; display: block; margin-top: 8px;">— Relatório de Auditoria Externa, 2023</span>
+          <span style="font-size: 11px; font-weight: 700; color: var(--azul-tecnico); font-style: normal; display: block; margin-top: 8px;">— Relatório de Auditoria Externa, 2023</span>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== SINAIS DE ALERTA ===== -->
+<section class="problema" id="problema">
+  <div class="container">
+    <h2 class="section-title">Sinais de alerta no seu condomínio</h2>
+    <p class="section-subtitle">O condomínio que não tem gestão financeira sólida quebra na primeira crise — e a conta sobra para o morador.</p>
+    
+    <div class="problema-grid">
+      <div class="alerta-card">
+        <i class="ph-bold ph-currency-circle-dollar alerta-icon"></i>
+        <p>Cobrou taxa extra e fundo de reserva, mas não fez gestão. Vai pagar duas vezes.</p>
+      </div>
+      <div class="alerta-card">
+        <i class="ph-bold ph-receipt alerta-icon"></i>
+        <p>Transparência não é pagar em dia. É gastar certo, para o condômino não pagar o dobro.</p>
+      </div>
+      <div class="alerta-card">
+        <i class="ph-bold ph-warning alerta-icon"></i>
+        <p>Pergunta que ninguém quer ouvir: "Cadê o saldo da taxa extra?"</p>
+      </div>
+    </div>
+    
+    <div class="problema-fechamento">Não é falta de vontade da equipe. É falta de governança e compliance.</div>
   </div>
 </section>
 
@@ -907,15 +382,29 @@ footer {
   <div class="container">
     <h2 class="section-title">Método de Gestão: Os 5 Pilares</h2>
     <p class="section-subtitle">Minha gestão é baseada em cinco pilares técnicos que garantem a saúde financeira, a segurança jurídica e a valorização do seu patrimônio.</p>
+    
     <div class="passos">
-      <div class="passo-card"><div class="passo-numero">01</div><h3>Gestão Financeira</h3><p>Planejamento realista e controles rígidos sobre arrecadação e despesa. Gestão segregada de verbas (taxas extras e fundo de reserva).</p></div>
-      <div class="passo-card"><div class="passo-numero">02</div><h3>Gestão Patrimonial</h3><p>Manutenção preventiva focada na valorização do imóvel. Cronogramas prediais para evitar obras emergenciais de alto custo.</p></div>
-      <div class="passo-card"><div class="passo-numero">03</div><h3>Gestão Operacional</h3><p>Organização de rotinas, fluxos de atendimento e gestão de equipes e fornecedores com ferramentas digitais.</p></div>
-      <div class="passo-card"><div class="passo-numero">04</div><h3>Segurança e Convivência</h3><p>Auditoria de sistemas de segurança (CFTV, cercas, controle de acesso) e conservação de áreas comuns.</p></div>
-      <div class="passo-card"><div class="passo-numero">05</div><h3>Governança e Compliance</h3><p>Alinhamento das práticas à convenção, ao regimento e à legislação. Gestão cruzada de documentos para decisões com respaldo legal.</p></div>
-      <div class="passo-card"><div class="passo-numero">06</div><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual (auditoria de contratos, finanças e infraestrutura) e apresentação de um plano de melhorias estruturado.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-currency-circle-dollar icone-animado"></i><div class="passo-numero">01</div><h3>Gestão Financeira</h3><p>Planejamento realista e controles rígidos sobre arrecadação e despesa. Gestão segregada de verbas.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-buildings icone-animado"></i><div class="passo-numero">02</div><h3>Gestão Patrimonial</h3><p>Manutenção preventiva focada na valorização do imóvel. Cronogramas prediais para evitar obras emergenciais.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-users-three icone-animado"></i><div class="passo-numero">03</div><h3>Gestão Operacional</h3><p>Organização de rotinas, fluxos de atendimento e gestão de equipes e fornecedores com ferramentas digitais.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-shield-check icone-animado"></i><div class="passo-numero">04</div><h3>Segurança e Convivência</h3><p>Auditoria de sistemas de segurança (CFTV, cercas) e conservação de áreas comuns.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-scales icone-animado"></i><div class="passo-numero">05</div><h3>Governança e Compliance</h3><p>Alinhamento das práticas à convenção, ao regimento e à legislação.</p></div>
+      <div class="passo-card"><i class="ph-bold ph-magnifying-glass icone-animado"></i><div class="passo-numero">06</div><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual e apresentação de um plano de melhorias estruturado.</p></div>
     </div>
-    <div class="fluxo">Diagnóstico → Planejamento → Execução → Controle → Transparência → Contabilização</div>
+
+    <div class="fluxo-timeline">
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-magnifying-glass"></i></div><span>Diagnóstico</span></div>
+      <div class="fluxo-seta"><i class="ph-bold ph-arrow-right"></i></div>
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-clipboard-text"></i></div><span>Planejamento</span></div>
+      <div class="fluxo-seta"><i class="ph-bold ph-arrow-right"></i></div>
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-play-circle"></i></div><span>Execução</span></div>
+      <div class="fluxo-seta"><i class="ph-bold ph-arrow-right"></i></div>
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-check-square"></i></div><span>Controle</span></div>
+      <div class="fluxo-seta"><i class="ph-bold ph-arrow-right"></i></div>
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-eye"></i></div><span>Transparência</span></div>
+      <div class="fluxo-seta"><i class="ph-bold ph-arrow-right"></i></div>
+      <div class="fluxo-passo"><div class="fluxo-icone"><i class="ph-bold ph-file-text"></i></div><span>Contabilização</span></div>
+    </div>
   </div>
 </section>
 
@@ -924,12 +413,12 @@ footer {
   <div class="container">
     <h2 class="section-title">Por que me contratar</h2>
     <div class="diferenciais-list">
-      <div class="diferencial-item"><span class="diferencial-numero">01</span><div><h3>Rigor de auditoria</h3><p>MBA em Controladoria e Auditoria + formação específica em síndico profissional (72h) + 20 anos em indústria e terceiro setor.</p></div></div>
-      <div class="diferencial-item"><span class="diferencial-numero">02</span><div><h3>Transparência que o morador entende</h3><p>Prestação de contas com dashboards visuais (Looker Studio / Excel Avançado). O morador enxerga para onde vai cada centavo.</p></div></div>
-      <div class="diferencial-item"><span class="diferencial-numero">03</span><div><h3>Gestão com respaldo jurídico</h3><p>Decisões alinhadas à convenção, ao regimento e ao Código Civil. Gestão cruzada de atas e documentos.</p></div></div>
-      <div class="diferencial-item"><span class="diferencial-numero">04</span><div><h3>Isenção e método</h3><p>Síndico profissional não mora no condomínio, não tem conflito de interesse com vizinhos e governa por processo.</p></div></div>
-      <div class="diferencial-item"><span class="diferencial-numero">05</span><div><h3>Tecnologia e processos rastreáveis</h3><p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet) para que tudo seja rastreável e auditável.</p></div></div>
-      <div class="diferencial-item"><span class="diferencial-numero">06</span><div><h3>Respeito à autonomia</h3><p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas, não disruptivas por natureza.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">01</span><div><h3>Rigor de auditoria</h3><p>MBA em Controladoria e Auditoria + formação em síndico profissional (72h) + 20 anos em indústria e terceiro setor.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">02</span><div><h3>Transparência que o morador entende</h3><p>Prestação de contas com dashboards visuais. O morador enxerga para onde vai cada centavo.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">03</span><div><h3>Gestão com respaldo jurídico</h3><p>Decisões alinhadas à convenção, ao regimento e ao Código Civil.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">04</span><div><h3>Isenção e método</h3><p>Síndico profissional não mora no condomínio, não tem conflito de interesse e governa por processo.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">05</span><div><h3>Tecnologia e processos rastreáveis</h3><p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet) para que tudo seja rastreável.</p></div></div>
+      <div class="diferencial-item"><span class="diferencial-numero">06</span><div><h3>Respeito à autonomia</h3><p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas.</p></div></div>
     </div>
   </div>
 </section>
@@ -938,14 +427,14 @@ footer {
 <section class="funcionalidades" id="ferramentas">
   <div class="container">
     <h2 class="section-title">Ferramentas e Governança</h2>
-    <p class="section-subtitle">Tecnologia e transparência a serviço do condomínio. Não gerencio com base em "achismos" — utilizo ferramentas de mercado para dar visibilidade aos números e processos.</p>
+    <p class="section-subtitle">Tecnologia e transparência a serviço do condomínio. Utilizo ferramentas de mercado para dar visibilidade aos números e processos.</p>
     <div class="cards-grid">
-      <div class="card"><span class="card-icon">◈</span><h3>Dashboards de Gestão</h3><p>Looker Studio / Excel Avançado. Relatórios visuais e de fácil leitura para que o conselho e os moradores saibam exatamente para onde vai cada centavo.</p></div>
-      <div class="card"><span class="card-icon">✓</span><h3>Gestão de Processos</h3><p>Apps Script + HTML, AppSheet e Google Workspace. Desenvolvimento de aplicações web próprias e automações para que o processo administrativo flua de forma ágil, segura e rastreável.</p></div>
-      <div class="card"><span class="card-icon">⏱</span><h3>Comunicação Profissional</h3><p>Criação de apresentações profissionais e métodos eficientes de controle administrativo-financeiro para reuniões de conselho e assembleias.</p></div>
-      <div class="card"><span class="card-icon">▣</span><h3>Controle Orçamentário</h3><p>Ferramentas de acompanhamento de indicadores e organização de processos para manter os custos sob controle e evitar surpresas no fechamento.</p></div>
-      <div class="card"><span class="card-icon">⌁</span><h3>Rastreabilidade Documental</h3><p>Processos auditáveis com registro de decisões, contratos e prestações de contas. Histórico preservado, sem apagar o passado.</p></div>
-      <div class="card"><span class="card-icon">▤</span><h3>Gestão de Contratos e Fornecedores</h3><p>Revisão periódica de contratos e cotações rigorosas, buscando economia sem perda de qualidade e garantindo que o serviço pago seja entregue.</p></div>
+      <div class="card"><i class="ph-bold ph-chart-pie-slice icone-animado"></i><h3>Dashboards de Gestão</h3><p>Looker Studio / Excel Avançado. Relatórios visuais para que o conselho saiba exatamente para onde vai cada centavo.</p></div>
+      <div class="card"><i class="ph-bold ph-gear icone-animado"></i><h3>Gestão de Processos</h3><p>Apps Script, AppSheet e Google Workspace. Aplicações web próprias e automações para um processo ágil e rastreável.</p></div>
+      <div class="card"><i class="ph-bold ph-presentation-chart icone-animado"></i><h3>Comunicação Profissional</h3><p>Apresentações profissionais e métodos de controle administrativo-financeiro para reuniões e assembleias.</p></div>
+      <div class="card"><i class="ph-bold ph-wallet icone-animado"></i><h3>Controle Orçamentário</h3><p>Acompanhamento de indicadores e organização de processos para manter os custos sob controle.</p></div>
+      <div class="card"><i class="ph-bold ph-files icone-animado"></i><h3>Rastreabilidade Documental</h3><p>Processos auditáveis com registro de decisões, contratos e prestações de contas. Histórico preservado.</p></div>
+      <div class="card"><i class="ph-bold ph-handshake icone-animado"></i><h3>Gestão de Contratos</h3><p>Revisão periódica e cotações rigorosas, buscando economia sem perda de qualidade.</p></div>
     </div>
   </div>
 </section>
@@ -955,9 +444,9 @@ footer {
   <div class="container">
     <h2 class="section-title">Como posso atuar</h2>
     <div class="cards-grid">
-      <div class="card"><span class="card-icon">◈</span><h3>Síndico Profissional</h3><p>Assunção completa da gestão administrativa, financeira e operacional, com representação legal, método e transparência.</p></div>
-      <div class="card"><span class="card-icon">✓</span><h3>Assessoria Condominial</h3><p>Apoio técnico e financeiro para síndicos moradores que precisam de ajuda na organização e no controle.</p></div>
-      <div class="card"><span class="card-icon">▣</span><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual e apresentação de um plano de melhorias estruturado e personalizado.</p></div>
+      <div class="card"><i class="ph-bold ph-user-circle-gear icone-animado"></i><h3>Síndico Profissional</h3><p>Assunção completa da gestão administrativa, financeira e operacional, com representação legal e transparência.</p></div>
+      <div class="card"><i class="ph-bold ph-clipboard-text icone-animado"></i><h3>Assessoria Condominial</h3><p>Apoio técnico e financeiro para síndicos moradores que precisam de ajuda na organização e no controle.</p></div>
+      <div class="card"><i class="ph-bold ph-magnifying-glass icone-animado"></i><h3>Diagnóstico e Plano de Ação</h3><p>Avaliação da situação atual e apresentação de um plano de melhorias estruturado e personalizado.</p></div>
     </div>
   </div>
 </section>
@@ -984,23 +473,11 @@ footer {
 <section class="faq" id="faq">
   <div class="container">
     <h2 class="section-title">Perguntas frequentes</h2>
-    <div class="faq-list" style="margin-top: 40px;">
-      <details class="faq-item">
-        <summary>Qual a diferença entre síndico morador e síndico profissional?</summary>
-        <div class="faq-resposta"><p>O síndico morador tem boa vontade, mas acumula função, enfrenta conflito de interesse e nem sempre tem formação técnica. O síndico profissional traz <strong>técnica, tempo, isenção e responsabilidade formal</strong>. A gestão passa a ter método e lastro.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>O síndico profissional vai mudar tudo no condomínio?</summary>
-        <div class="faq-resposta"><p>Não por natureza. O condomínio é uma empresa, com CNPJ e autonomia institucional. As propostas são <strong>personalizadas, não disruptivas</strong> — disruptivas só se o condomínio quiser.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Como funciona a prestação de contas?</summary>
-        <div class="faq-resposta"><p>A prestação de contas é feita com <strong>relatórios visuais (dashboards)</strong>, gestão segregada de verbas e cumprimento estrito do Código Civil. O morador enxerga exatamente para onde vai cada centavo.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Quanto custa e como é a transição?</summary>
-        <div class="faq-resposta"><p>O valor depende do porte do condomínio e o diagnóstico inicial define a proposta. A transição começa com um diagnóstico (auditoria de contratos, finanças e infraestrutura) e um plano de ação assistido, sem quebra de continuidade.</p></div>
-      </details>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Qual a diferença entre síndico morador e síndico profissional?</summary><div class="faq-resposta"><p>O síndico morador tem boa vontade, mas acumula função, enfrenta conflito de interesse e nem sempre tem formação técnica. O síndico profissional traz <strong>técnica, tempo, isenção e responsabilidade formal</strong>.</p></div></details>
+      <details class="faq-item"><summary>O síndico profissional vai mudar tudo no condomínio?</summary><div class="faq-resposta"><p>Não por natureza. O condomínio é uma empresa, com CNPJ e autonomia institucional. As propostas são <strong>personalizadas, não disruptivas</strong> — disruptivas só se o condomínio quiser.</p></div></details>
+      <details class="faq-item"><summary>Como funciona a prestação de contas?</summary><div class="faq-resposta"><p>A prestação de contas é feita com <strong>relatórios visuais (dashboards)</strong>, gestão segregada de verbas e cumprimento estrito do Código Civil.</p></div></details>
+      <details class="faq-item"><summary>Quanto custa e como é a transição?</summary><div class="faq-resposta"><p>O valor depende do porte do condomínio e o diagnóstico inicial define a proposta. A transição começa com um diagnóstico (auditoria de contratos, finanças e infraestrutura) e um plano de ação assistido.</p></div></details>
     </div>
   </div>
 </section>
@@ -1019,20 +496,11 @@ footer {
   <div class="container">
     <h2 class="section-title">Fale com um especialista</h2>
     <p class="section-subtitle">Preencha o formulário e retornaremos em até 1 dia útil.</p>
-	<form class="contato-form" action="https://formspree.io/f/xyeeyabk" method="POST">
+    <form class="contato-form" action="https://formspree.io/f/xyeeyabk" method="POST">
       <p class="form-obrigatorio">Os campos marcados com * são obrigatórios.</p>
-      <div>
-        <label for="nome">Nome *</label>
-        <input type="text" id="nome" name="nome" required>
-      </div>
-      <div>
-        <label for="email">E-mail *</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div>
-        <label for="mensagem">Mensagem *</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-      </div>
+      <div><label for="nome">Nome *</label><input type="text" id="nome" name="nome" required></div>
+      <div><label for="email">E-mail *</label><input type="email" id="email" name="email" required></div>
+      <div><label for="mensagem">Mensagem *</label><textarea id="mensagem" name="mensagem" required></textarea></div>
       <button type="submit">Enviar mensagem</button>
     </form>
   </div>
@@ -1043,10 +511,7 @@ footer {
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <div class="logo-halo">
-          <img src="https://mpsmdem-estrela.github.io/MP_Servicos/logo.png" alt="MP Serviços" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-          <span class="logo-fallback" style="display:none;">MP</span>
-        </div>
+        <div class="logo-halo"><img src="https://mpsmdem-estrela.github.io/MP_Servicos/logo.png" alt="MP Serviços"></div>
         <div class="footer-brand-text">
           <span class="footer-brand-name">MP Serviços</span>
           <span class="footer-brand-tag">Michell Patrick — Síndico Profissional</span>
@@ -1074,9 +539,7 @@ footer {
 
 <!-- ===== WHATSAPP FLUTUANTE ===== -->
 <a href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20gest%C3%A3o%20condominial" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#ffffff">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#ffffff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 </body>
