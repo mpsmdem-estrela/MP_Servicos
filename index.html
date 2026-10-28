@@ -152,13 +152,106 @@ section { padding: 80px 0; }
 .passo-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--azul-institucional); font-weight: 700; }
 .passo-card p { font-size: 14px; color: var(--cinza-metalico); line-height: 1.6; }
 
-/* Fluxo Timeline */
-.fluxo-timeline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 60px; position: relative; }
-.fluxo-timeline::before { content: ''; position: absolute; top: 30px; left: 5%; right: 5%; height: 2px; background: var(--azul-suave); z-index: 0; }
-.fluxo-passo { display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1; min-width: 100px; z-index: 1; }
-.fluxo-icone { width: 60px; height: 60px; background: var(--branco); border: 2px solid var(--azul-tecnico); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--azul-tecnico); box-shadow: 0 4px 12px rgba(46, 90, 136, 0.15); }
-.fluxo-passo span { font-size: 13px; font-weight: 700; color: var(--azul-institucional); text-align: center; text-transform: uppercase; letter-spacing: 1px; }
-.fluxo-seta { color: var(--borda); font-size: 24px; z-index: 1; }
+/* ===== FLUXO TIMELINE ANIMADO (TECH) ===== */
+.fluxo-timeline { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 60px; 
+  position: relative; 
+}
+
+.fluxo-timeline::before { 
+  content: ''; 
+  position: absolute; 
+  top: 30px; 
+  left: 5%; 
+  right: 5%; 
+  height: 2px; 
+  background: var(--borda); 
+  z-index: 0; 
+}
+
+.fluxo-passo { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 12px; 
+  flex: 1; 
+  min-width: 100px; 
+  z-index: 1; 
+}
+
+/* O Círculo do Ícone */
+.fluxo-icone { 
+  width: 60px; 
+  height: 60px; 
+  background: var(--branco); 
+  border: 2px solid var(--azul-tecnico); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 28px; 
+  color: var(--azul-tecnico); 
+  box-shadow: 0 4px 12px rgba(46, 90, 136, 0.1); 
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Texto do Passo */
+.fluxo-passo span { 
+  font-size: 13px; 
+  font-weight: 700; 
+  color: var(--azul-institucional); 
+  text-align: center; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  transition: color 0.3s;
+}
+
+/* Seta */
+.fluxo-seta { 
+  color: var(--borda); 
+  font-size: 24px; 
+  z-index: 1; 
+  transition: color 0.3s;
+}
+
+/* ===== EFEITOS DE HOVER (INTERATIVIDADE) ===== */
+
+/* 1. O passo inteiro flutua levemente */
+.fluxo-passo:hover {
+  transform: translateY(-8px);
+}
+
+/* 2. O ícone ganha destaque, sombra e um anel de energia */
+.fluxo-passo:hover .fluxo-icone {
+  border-color: var(--azul-claro);
+  color: var(--azul-institucional);
+  box-shadow: 0 8px 24px rgba(79, 127, 179, 0.4), 0 0 0 4px var(--azul-suave);
+  background: var(--azul-suave);
+}
+
+/* 3. O texto acompanha a cor do ícone */
+.fluxo-passo:hover span {
+  color: var(--azul-tecnico);
+}
+
+/* 4. A seta acende sutilmente quando o mouse está no bloco */
+.fluxo-passo:hover + .fluxo-seta, 
+.fluxo-passo:hover ~ .fluxo-seta {
+  color: var(--azul-claro);
+}
+
+/* Responsividade */
+@media (max-width: 900px) { 
+  .fluxo-timeline { flex-direction: column; gap: 20px; } 
+  .fluxo-timeline::before { display: none; } 
+  .fluxo-seta { transform: rotate(90deg); margin: 10px 0; } 
+}
 
 /* ===== DIFERENCIAIS ===== */
 .diferenciais { background: var(--cinza-claro); }
@@ -299,46 +392,86 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
   </div>
 </section>
 
-<!-- ===== PROVA SOCIAL (KPIs) ===== -->
-<section class="prova-numeros">
+<!-- ===== RESULTADOS EM CAMPO: JARDIM PARADISO ANTÚRIO ===== -->
+<section class="resultados-anturio" id="resultados" style="background: var(--cinza-claro); padding: 80px 0;">
   <div class="container">
-    <div class="grid-numeros">
-      <div class="stat-item"><i class="ph-bold ph-currency-circle-dollar stat-icon"></i><div class="numero-destaque">R$ 36 mil</div><div class="numero-label">Economizados / ano</div></div>
-      <div class="stat-item"><i class="ph-bold ph-buildings stat-icon"></i><div class="numero-destaque">26</div><div class="numero-label">Blocos impermeabilizados</div></div>
-      <div class="stat-item"><i class="ph-bold ph-video-camera stat-icon"></i><div class="numero-destaque">100%</div><div class="numero-label">Dos blocos com CFTV</div></div>
-      <div class="stat-item"><i class="ph-bold ph-chart-line-down stat-icon"></i><div class="numero-destaque">R$ 4 milhões</div><div class="numero-label">Aplicados com eficiência (4 anos)</div></div>
-      <div class="stat-item"><i class="ph-bold ph-coins stat-icon"></i><div class="numero-destaque">30%</div><div class="numero-label">Receita extra (inadimplência)</div></div>
-      <div class="stat-item"><i class="ph-bold ph-calendar-check stat-icon"></i><div class="numero-destaque">4 anos</div><div class="numero-label">Gestão no Antúrio</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== RESULTADOS EM CAMPO (FOTOS) ===== -->
-<section class="obras" id="resultados" style="background: var(--branco); padding: 60px 0;">
-  <div class="container">
-    <h2 class="section-title">Resultados em campo</h2>
-    <p class="section-subtitle">O método aplicado na prática. Obras e melhorias entregues no Condomínio Jardim Paradiso Antúrio.</p>
     
-    <div style="text-align: center; margin-bottom: 32px;">
-      <img src="assets/img/logo-anturio.png" alt="Condomínio Jardim Paradiso Antúrio" style="height: 60px; width: auto;">
+    <!-- Cabeçalho da Seção com Logo -->
+    <div style="text-align: center; margin-bottom: 48px;">
+      <img src="assets/img/logo-anturio.png" alt="Condomínio Jardim Paradiso Antúrio" style="height: 70px; width: auto; margin-bottom: 16px; display: inline-block;">
+      <h2 class="section-title">Resultados em Campo</h2>
+      <p class="section-subtitle" style="margin-bottom: 0;">O método aplicado na prática no Condomínio Jardim Paradiso Antúrio.</p>
     </div>
 
-    <div class="grid-fotos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px;">
-      <div class="foto-card" style="background: var(--cinza-claro); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
+    <!-- Grade de 4 Cards Quantificados -->
+    <div class="grid-resultados" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 48px;">
+      
+      <!-- Card 1: Financeiro -->
+      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
+        <i class="ph-bold ph-currency-circle-dollar" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
+        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">R$ 36 mil</div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Economizados / ano</div>
+        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Revisão de contratos de prestação de serviço.</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 0% de aumento de taxa (4 anos)</p>
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 30% de receita extra (inadimplência)</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Infraestrutura -->
+      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
+        <i class="ph-bold ph-buildings" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
+        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">13 Blocos</div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Impermeabilizados</div>
+        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Eliminação de infiltrações (26 unidades A/B).</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 100% dos blocos com CFTV</p>
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Reforma do complexo administrativo a custo zero</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Governança -->
+      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
+        <i class="ph-bold ph-scales" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
+        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">4 Anos</div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">De gestão</div>
+        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Com processos documentados e rastreáveis.</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 4 ganhos em uma única ação (reforma da lixeira)</p>
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Regimento interno adequado (3º portão)</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Comunidade -->
+      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
+        <i class="ph-bold ph-users-three" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
+        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">2 Eventos</div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Sociais</div>
+        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Carnaval Infantil e exibição dos jogos da Copa 2022.</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 2 bancos de socialização</p>
+          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Playground reformado</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Grid de Fotos (Abaixo dos Cards) -->
+    <div class="grid-fotos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="foto-card" style="background: var(--branco); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
         <img src="assets/img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; display: block;">
         <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Portaria revitalizada</div>
       </div>
-      
-      <div class="foto-card" style="background: var(--cinza-claro); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
+      <div class="foto-card" style="background: var(--branco); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
         <img src="assets/img/piscina.jpg" alt="Piscina reformada com piso novo do Condomínio Jardim Paradiso Antúrio" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; display: block;">
         <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Piscina com piso novo</div>
       </div>
-      
-      <div class="foto-card" style="background: var(--cinza-claro); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
+      <div class="foto-card" style="background: var(--branco); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
         <img src="assets/img/quadra_poliesportiva.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; display: block;">
         <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Quadra poliesportiva</div>
       </div>
     </div>
+
   </div>
 </section>
 
