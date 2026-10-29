@@ -10,6 +10,8 @@
 <meta property="og:description" content="Gestão condominial com método, transparência e resultado. Formação para servir. Experiência para resolver.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="assets/img/fundo-condominio.jpg">
+<link rel="icon" href="logo.png" type="image/png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,8 +49,6 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 section[id]{scroll-margin-top:80px}
 .container{width:min(1180px,92%);margin-inline:auto}
 i[data-lucide],svg.lucide{width:1.25em;height:1.25em;stroke-width:2;flex-shrink:0}
-
-/* ---------- Utilidades ---------- */
 .section{padding:clamp(72px,9vw,120px) 0;position:relative}
 .dark{background:var(--navy-900);color:#e9f0f6}
 .light{background:var(--bg)}
@@ -62,14 +62,10 @@ h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.12;font-weight:800;letter-sp
 .dark .acc{background:linear-gradient(90deg,#7fd3f5,var(--cyan));-webkit-background-clip:text;background-clip:text}
 .head{margin-bottom:clamp(36px,5vw,64px)}
 .head.center{text-align:center}.head.center .lead{margin-inline:auto}.head.center .eyebrow{justify-content:center}
-
-/* Revelar ao rolar */
 .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .reveal.in{opacity:1;transform:none}
 .js .reveal.left{transform:translateX(-40px)}.js .reveal.right{transform:translateX(40px)}
 .js .reveal.left.in,.js .reveal.right.in{transform:none}
-
-/* ---------- Botões ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:14px;font-weight:700;font-size:.95rem;transition:transform .3s,box-shadow .3s,background .3s;position:relative;overflow:hidden}
 .btn:hover{transform:translateY(-3px)}
 .btn-wa{background:linear-gradient(135deg,#2be074,var(--wa-d));color:#fff;box-shadow:0 14px 30px -10px rgba(37,211,102,.6)}
@@ -80,14 +76,12 @@ h2{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.12;font-weight:800;letter-sp
 .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:var(--cyan)}
 .btn-dark{background:var(--navy-900);color:#fff}
 .btn-dark:hover{background:var(--navy-700)}
-
-/* ---------- Header ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:200}
 header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .4s,box-shadow .4s,padding .4s;padding:18px 0}
 header.scrolled{background:rgba(7,18,28,.78);backdrop-filter:blur(16px) saturate(160%);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);padding:10px 0}
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
-.brand svg{width:46px;height:46px;filter:drop-shadow(0 0 14px rgba(76,194,240,.45))}
+.brand img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 0 14px rgba(76,194,240,.45))}
 .brand b{display:block;font-size:1.02rem;line-height:1.1}
 .brand small{display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-weight:600}
 nav ul{display:flex;gap:30px;list-style:none;align-items:center}
@@ -103,8 +97,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
   nav ul{flex-direction:column;gap:22px;text-align:center}
   nav a.link{font-size:1.3rem}
 }
-
-/* ---------- Hero ---------- */
 .hero{min-height:100svh;background:var(--navy-950);color:#fff;position:relative;overflow:hidden;display:flex;align-items:center;padding:130px 0 150px}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(76,194,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(76,194,240,.07) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:blob 16s ease-in-out infinite alternate}
@@ -124,10 +116,9 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:#cfe0ee;padding:8px 14px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
 .chip i{color:var(--cyan);width:1.1em;height:1.1em}
-
 .hero-visual{position:relative;width:min(470px,100%);aspect-ratio:1;margin-inline:auto}
 .hero-visual .core{position:absolute;inset:22%;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,rgba(76,194,240,.22),transparent 68%)}
-.hero-visual .core svg{width:78%;height:78%;filter:drop-shadow(0 20px 40px rgba(0,0,0,.55)) drop-shadow(0 0 30px rgba(76,194,240,.4));animation:bob 6s ease-in-out infinite}
+.hero-visual .core img{width:78%;height:78%;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,.55)) drop-shadow(0 0 30px rgba(76,194,240,.4));animation:bob 6s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-12px)}}
 .orbit{position:absolute;border-radius:50%;border:1px dashed rgba(76,194,240,.35);animation:spin 40s linear infinite}
 .orbit.o1{inset:6%}.orbit.o2{inset:-4%;border-style:solid;border-color:rgba(255,255,255,.07);animation-duration:70s;animation-direction:reverse}
@@ -146,8 +137,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
   .hero-visual{width:min(380px,86%);margin-top:20px}.fcard{padding:9px 12px}.fcard b{font-size:.9rem}
   .fcard.c1{left:-4%}.fcard.c2{right:-4%}.scroll-hint{display:none}
 }
-
-/* ---------- Faixa de números ---------- */
 .strip{position:relative;z-index:5;margin-top:-80px}
 .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:26px;box-shadow:0 30px 60px -25px rgba(12,27,41,.35);border:1px solid var(--line);overflow:hidden}
 .strip-item{padding:28px 24px;display:flex;gap:16px;align-items:center;border-right:1px solid var(--line)}
@@ -156,8 +145,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .strip-item b{font-size:1.7rem;font-weight:800;line-height:1;display:block}
 .strip-item small{font-size:.76rem;color:var(--muted);font-weight:500;line-height:1.3;display:block;margin-top:4px}
 @media(max-width:900px){.strip-grid{grid-template-columns:1fr 1fr}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.strip-item{padding:20px 16px;flex-direction:column;text-align:center;gap:10px}}
-
-/* ---------- Citação ---------- */
 .quote{padding:clamp(80px,10vw,130px) 0 clamp(60px,8vw,100px);text-align:center;position:relative;overflow:hidden}
 .quote .qmark{width:64px;height:64px;color:var(--cyan);opacity:.9;margin:0 auto 22px;display:block}
 .quote blockquote{font-size:clamp(1.25rem,2.6vw,2.05rem);font-weight:600;line-height:1.5;max-width:900px;margin:0 auto 26px;letter-spacing:-.01em}
@@ -167,8 +154,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .waves{position:absolute;left:0;bottom:0;width:200%;height:90px;opacity:.5;animation:wave 18s linear infinite}
 .waves.w2{opacity:.3;animation-duration:26s;animation-direction:reverse;bottom:-8px}
 @keyframes wave{to{transform:translateX(-50%)}}
-
-/* ---------- Sinais de alerta ---------- */
 .alert-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:stretch}
 .alert-main{background:linear-gradient(145deg,var(--navy-900),var(--navy-700));color:#fff;border-radius:var(--r);padding:clamp(28px,4vw,48px);position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .alert-main::after{content:"";position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(239,83,80,.35),transparent 70%)}
@@ -185,8 +170,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .alert-item.fix{border-left-color:var(--blue);background:linear-gradient(135deg,#eaf3fc,#fff)}.alert-item.fix i{color:var(--blue-600)}
 .alert-item b{font-weight:700}
 @media(max-width:900px){.alert-grid{grid-template-columns:1fr}}
-
-/* ---------- Método / roda ---------- */
 .method-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
 .wheel{position:relative;width:min(440px,100%);aspect-ratio:1;margin-inline:auto}
 .wheel svg{width:100%;height:100%;overflow:visible}
@@ -209,8 +192,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .prow.on .pt small{max-height:120px;opacity:1;margin-top:6px}
 .prow>i{margin-left:auto;color:#6f88a0;transition:color .4s}.prow.on>i{color:var(--cyan)}
 @media(max-width:900px){.method-grid{grid-template-columns:1fr}}
-
-/* Ciclo */
 .cycle{margin-top:clamp(60px,8vw,100px);padding:clamp(28px,4vw,50px);border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09)}
 .cycle h3{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:800;margin-bottom:8px}
 .cycle>p{color:#a9bccd;max-width:640px}
@@ -230,8 +211,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
   .step{display:flex;gap:18px;align-items:center;text-align:left;padding:8px 0}
   .step .ico{margin:0;flex-shrink:0}
 }
-
-/* ---------- Resultados ---------- */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
 .bcard{border-radius:var(--r);padding:clamp(24px,3vw,36px);position:relative;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform .4s,box-shadow .4s}
 .bcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
@@ -264,7 +243,8 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .year i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.3,.6,.2,1);transition-delay:calc(var(--n)*.35s + .3s)}
 .in .year i::after{transform:scaleX(1)}
 @media(max-width:900px){.bcard.s5,.bcard.s7{grid-column:span 12}}
-
+.condo-logo{display:flex;justify-content:center;margin-top:24px}
+.condo-logo img{height:84px;width:auto;max-width:280px;object-fit:contain;background:#fff;padding:10px 22px;border-radius:16px;border:1px solid var(--line);box-shadow:0 14px 30px -14px rgba(12,27,41,.3)}
 .banner{margin-top:clamp(40px,6vw,70px)}
 .shot{position:relative;overflow:hidden;border-radius:var(--r);background:linear-gradient(135deg,var(--navy-700),var(--navy-950));cursor:zoom-in;isolation:isolate}
 .shot::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(76,194,240,.25),transparent 55%),repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 12px,transparent 12px 24px);z-index:-1}
@@ -278,7 +258,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
 .gallery .shot{aspect-ratio:4/3.2}
 @media(max-width:800px){.gallery{grid-template-columns:1fr}.banner .shot{aspect-ratio:16/10}}
-
 .more{margin-top:clamp(40px,6vw,70px)}
 .more h3{font-size:1.4rem;font-weight:800;margin-bottom:22px;display:flex;align-items:center;gap:12px}
 .more h3 i{color:var(--blue-600)}
@@ -290,14 +269,12 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .mitem.hl .mi{background:rgba(76,194,240,.16);color:var(--cyan);box-shadow:none}
 .mitem.hl small{display:inline-block;margin-left:8px;padding:3px 12px;border-radius:99px;background:var(--cyan);color:var(--navy-950);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle}
 @media(max-width:900px){.more-grid{grid-template-columns:1fr}.mitem.hl{grid-column:auto}}
-
-/* ---------- Sobre ---------- */
 .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(34px,6vw,80px);align-items:center}
 .portrait{position:relative;max-width:440px;margin-inline:auto;width:100%}
 .portrait .frame{aspect-ratio:4/5;border-radius:34px;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--navy-700),var(--navy-950));box-shadow:0 40px 70px -30px rgba(12,27,41,.6);display:grid;place-items:center}
 .portrait .frame::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(76,194,240,.3),transparent 60%)}
-.portrait .frame svg{width:52%;position:relative;filter:drop-shadow(0 0 28px rgba(76,194,240,.5))}
-.portrait .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.portrait .frame img.logo-ph{width:52%;height:auto;position:relative;object-fit:contain;filter:drop-shadow(0 0 28px rgba(76,194,240,.5))}
+.portrait .frame img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
 .portrait::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--cyan);border-radius:38px;opacity:.5;z-index:0}
 .portrait .frame{z-index:1}
 .pbadge{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;background:#fff;padding:11px 16px;border-radius:14px;box-shadow:0 18px 36px -12px rgba(12,27,41,.4);font-size:.78rem;font-weight:700;animation:float 7s ease-in-out infinite}
@@ -311,7 +288,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .trail i{color:var(--blue-600);margin-bottom:10px;width:28px;height:28px}
 .trail b{display:block;font-size:.95rem}.trail small{display:block;color:var(--muted);font-size:.8rem;line-height:1.5;margin-top:4px}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr}.trail{grid-template-columns:1fr}.pbadge.p1{right:0}.pbadge.p2{left:0}}
-
 .formation{margin-top:clamp(70px,9vw,120px)}
 .formation .hero-card{display:flex;gap:22px;align-items:center;margin:34px 0 20px;padding:clamp(24px,3vw,36px);border-radius:var(--r);background:linear-gradient(135deg,var(--navy-900),var(--navy-700));color:#fff;box-shadow:var(--shadow)}
 .formation .hero-card .ic{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;background:rgba(76,194,240,.16);color:var(--cyan);flex-shrink:0}
@@ -325,7 +301,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .fcard2 h4{font-size:1rem;font-weight:700;margin-bottom:8px}.fcard2 p{font-size:.86rem;color:var(--muted);line-height:1.55}
 @media(max-width:1000px){.fgrid{grid-template-columns:repeat(2,1fr)}.formation .hero-card{flex-direction:column;align-items:flex-start}}
 @media(max-width:560px){.fgrid{grid-template-columns:1fr}}
-
 .audit{margin-top:clamp(60px,8vw,100px);border-radius:32px;padding:clamp(30px,5vw,60px);background:var(--navy-900);color:#fff;position:relative;overflow:hidden}
 .audit::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(76,194,240,.22),transparent 65%);right:-100px;top:-120px}
 .audit h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800;position:relative}
@@ -339,8 +314,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .aquote{position:relative;padding:26px 30px;border-radius:20px;border-left:4px solid var(--cyan);background:rgba(255,255,255,.05);font-size:1.02rem;line-height:1.7;font-style:italic;color:#d9e6f1}
 .aquote cite{display:block;font-style:normal;font-weight:700;font-size:.82rem;color:var(--cyan);margin-top:12px;letter-spacing:.04em}
 @media(max-width:900px){.astats{grid-template-columns:1fr 1fr}}
-
-/* ---------- Por que ---------- */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .why{position:relative;padding:34px 28px;border-radius:var(--r);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.09);overflow:hidden;transition:.45s}
 .why::after{content:attr(data-n);position:absolute;right:16px;top:-6px;font-size:5.2rem;font-weight:800;color:rgba(255,255,255,.045);line-height:1;transition:color .4s}
@@ -349,8 +322,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .why .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 12px 24px -8px rgba(76,194,240,.5)}
 .why h3{font-size:1.1rem;margin-bottom:10px;color:#fff}.why p{color:#aec2d3;font-size:.92rem}
 @media(max-width:960px){.why-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
-
-/* ---------- Ferramentas ---------- */
 .tools-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,4vw,50px);align-items:start}
 .mock{position:sticky;top:100px;border-radius:26px;background:var(--navy-900);color:#fff;padding:20px 22px 24px;box-shadow:0 40px 70px -30px rgba(12,27,41,.7);border:1px solid rgba(255,255,255,.08)}
 .mock .bar{display:flex;gap:7px;align-items:center;margin-bottom:18px}
@@ -374,8 +345,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .tcard:hover .ic{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transform:rotate(-8deg) scale(1.08)}
 .tcard h4{font-size:.98rem;margin-bottom:6px}.tcard p{font-size:.86rem;color:var(--muted);line-height:1.55}
 @media(max-width:960px){.tools-grid{grid-template-columns:1fr}.mock{position:relative;top:0}}@media(max-width:560px){.tgrid{grid-template-columns:1fr}}
-
-/* ---------- Atuar / Para quem ---------- */
 .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .act{padding:36px 30px;border-radius:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.45s}
 .act:hover{transform:translateY(-10px);box-shadow:0 30px 60px -25px rgba(12,27,41,.35)}
@@ -387,14 +356,11 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .act a{margin-top:24px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.88rem;color:var(--blue-600)}
 .act.feat a{color:var(--cyan)}.act a i{transition:transform .3s}.act a:hover i{transform:translateX(6px)}
 @media(max-width:960px){.act-grid{grid-template-columns:1fr}}
-
 .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
 .for{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:18px;background:var(--bg);font-weight:600;transition:.4s;border:1px solid transparent}
 .for:hover{background:#fff;border-color:var(--cyan);box-shadow:var(--shadow);transform:translateY(-4px)}
 .for .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#fff;color:var(--blue-600);box-shadow:0 6px 14px -6px rgba(12,27,41,.25);flex-shrink:0}
 @media(max-width:900px){.for-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.for-grid{grid-template-columns:1fr}}
-
-/* ---------- FAQ ---------- */
 .faq{max-width:860px;margin-inline:auto;display:flex;flex-direction:column;gap:14px}
 .qa{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.3s}
 .qa.open{border-color:rgba(63,123,191,.5);box-shadow:var(--shadow)}
@@ -404,8 +370,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1)}
 .qa.open .ans{grid-template-rows:1fr}
 .qa .ans>div{overflow:hidden}.qa .ans p{padding:0 26px 24px 26px;color:var(--muted);font-size:.96rem}
-
-/* ---------- CTA ---------- */
 .cta{background:var(--navy-950);color:#fff;text-align:center;position:relative;overflow:hidden;padding:clamp(80px,10vw,130px) 0}
 .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(63,123,191,.55),transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(76,194,240,.25),transparent 50%)}
 .cta .container{position:relative}
@@ -413,8 +377,6 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .cta .btn{padding:20px 38px;font-size:1.05rem}
 .cta .mini{margin-top:22px;font-size:.82rem;color:#7f97ac;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
 .cta .mini span{display:inline-flex;gap:8px;align-items:center}.cta .mini i{color:var(--cyan)}
-
-/* ---------- Contato ---------- */
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,60px);align-items:start}
 .cinfo{display:flex;flex-direction:column;gap:14px;margin-top:30px}
 .cl{display:flex;gap:16px;align-items:center;padding:18px 20px;border-radius:18px;background:var(--bg);transition:.35s}
@@ -435,18 +397,14 @@ form h3{font-size:1.4rem;margin-bottom:6px}form>p{color:var(--muted);font-size:.
 form .btn{width:100%;margin-top:6px}
 .alt{text-align:center;margin-top:16px;font-size:.84rem;color:var(--muted)}.alt a{color:var(--blue-600);font-weight:700}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
-
-/* ---------- Footer ---------- */
 footer{background:var(--navy-950);color:#a9bccd;padding:70px 0 30px;border-top:1px solid rgba(255,255,255,.06)}
 .f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
-.f-brand svg{width:96px;height:96px;margin-bottom:18px;filter:drop-shadow(0 0 22px rgba(76,194,240,.35))}
+.f-brand img{width:96px;height:96px;object-fit:contain;margin-bottom:18px;filter:drop-shadow(0 0 22px rgba(76,194,240,.35))}
 .f-brand b{color:#fff;font-size:1.1rem;display:block}.f-brand p{font-size:.88rem;margin-top:6px;max-width:320px}
 footer h5{color:#fff;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
 footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{transition:.3s;display:inline-flex;gap:8px;align-items:center}footer ul a:hover{color:var(--cyan);transform:translateX(5px)}
 .f-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:26px;font-size:.8rem}
 @media(max-width:800px){.f-grid{grid-template-columns:1fr}}
-
-/* ---------- Flutuantes ---------- */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:12px}
 .wa-float span{background:#fff;color:var(--ink);padding:10px 16px;border-radius:12px;font-size:.8rem;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.35);opacity:0;transform:translateX(14px);transition:.4s;pointer-events:none}
 .wa-float:hover span{opacity:1;transform:none}
@@ -458,7 +416,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 .lb button{position:absolute;top:22px;right:22px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center}
 .toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy-900);color:#fff;padding:16px 26px;border-radius:14px;z-index:400;font-weight:600;font-size:.9rem;box-shadow:0 20px 50px rgba(0,0,0,.4);transition:transform .5s;display:flex;gap:10px;align-items:center}
 .toast.show{transform:translate(-50%,0)}.toast i{color:var(--wa)}
-
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
   .js .reveal{opacity:1;transform:none}
@@ -467,28 +424,13 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 </head>
 <body>
 
-<!-- Logo (símbolo reutilizável). Para usar o arquivo oficial, troque os <use> por <img src="logo.png"> -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="lgm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#a9b3ba"/></linearGradient>
-    <symbol id="logo" viewBox="0 0 100 100">
-      <polygon points="50,2 92,26 92,74 50,98 8,74 8,26" fill="#0f2233"/>
-      <polygon points="50,9 86,30 86,70 50,91 14,70 14,30" fill="#8a949b"/>
-      <polygon points="50,14 82,32.5 82,67.5 50,86 18,67.5 18,32.5" fill="#fff"/>
-      <polygon points="50,19 77,34.5 77,65.5 50,81 23,65.5 23,34.5" fill="#0f2233"/>
-      <text x="50" y="57" text-anchor="middle" font-family="Montserrat,Arial" font-weight="800" font-size="28" fill="url(#lgm)">MP</text>
-      <rect x="33" y="60" width="5" height="10" fill="#4cc2f0"/><rect x="62" y="60" width="5" height="10" fill="#4cc2f0"/>
-    </symbol>
-  </defs>
-</svg>
-
 <div class="progress" id="progress"></div>
 
 <!-- ================= HEADER ================= -->
 <header id="header">
   <div class="container nav-wrap">
     <a href="#topo" class="brand" aria-label="MP Serviços – início">
-      <svg viewBox="0 0 100 100"><use href="#logo"/></svg>
+      <img src="logo.png" alt="Logo MP Serviços">
       <span><b>MP Serviços</b><small>Síndico Profissional</small></span>
     </a>
     <nav id="nav">
@@ -531,7 +473,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 
     <div class="hero-visual reveal" style="--d:.3s" aria-hidden="true">
       <div class="orbit o2"></div><div class="orbit o1"></div>
-      <div class="core"><svg viewBox="0 0 100 100"><use href="#logo"/></svg></div>
+      <div class="core"><img src="logo.png" alt="Logo MP Serviços"></div>
       <div class="fcard c1"><span class="ic"><i data-lucide="trending-down"></i></span><span><b>R$ 36 mil</b><small>economizados / ano</small></span></div>
       <div class="fcard c2"><span class="ic"><i data-lucide="cctv"></i></span><span><b>100%</b><small>dos blocos com CFTV</small></span></div>
       <div class="fcard c3"><span class="ic"><i data-lucide="file-check-2"></i></span><span><b>148</b><small>prestações de contas aprovadas</small></span></div>
@@ -640,6 +582,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <span class="eyebrow">Resultados em Campo</span>
       <h2>O método aplicado <span class="acc">na prática</span></h2>
       <p class="lead">Condomínio Jardim Paradiso Antúrio — números reais de uma gestão de 4 anos.</p>
+      <div class="condo-logo reveal" style="--d:.15s"><img src="assets/img/logo-anturio.png" alt="Logo Condomínio Jardim Paradiso Antúrio" loading="lazy"></div>
     </div>
 
     <div class="bento">
@@ -688,15 +631,15 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     <div class="banner reveal">
       <figure class="shot" data-lb>
         <div class="ph"><i data-lucide="image"></i></div>
-        <img src="img/condominio.jpg" alt="Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()">
+        <img src="assets/img/fundo-condominio.jpg" alt="Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()">
         <figcaption><i data-lucide="building"></i> Condomínio Jardim Paradiso Antúrio</figcaption>
       </figure>
     </div>
 
     <div class="gallery">
-      <figure class="shot reveal" data-lb style="--d:0s"><div class="ph"><i data-lucide="door-open"></i></div><img src="img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="door-open"></i> Portaria revitalizada</figcaption></figure>
-      <figure class="shot reveal" data-lb style="--d:.1s"><div class="ph"><i data-lucide="waves"></i></div><img src="img/piscina.jpg" alt="Piscina reformada com piso novo do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="waves"></i> Piscina com piso novo</figcaption></figure>
-      <figure class="shot reveal" data-lb style="--d:.2s"><div class="ph"><i data-lucide="trophy"></i></div><img src="img/quadra.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="trophy"></i> Quadra poliesportiva reformada</figcaption></figure>
+      <figure class="shot reveal" data-lb style="--d:0s"><div class="ph"><i data-lucide="door-open"></i></div><img src="assets/img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="door-open"></i> Portaria revitalizada</figcaption></figure>
+      <figure class="shot reveal" data-lb style="--d:.1s"><div class="ph"><i data-lucide="waves"></i></div><img src="assets/img/piscina.jpg" alt="Piscina reformada com piso novo do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="waves"></i> Piscina com piso novo</figcaption></figure>
+      <figure class="shot reveal" data-lb style="--d:.2s"><div class="ph"><i data-lucide="trophy"></i></div><img src="assets/img/quadra_poliesportiva.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy" onerror="this.remove()"><figcaption><i data-lucide="trophy"></i> Quadra poliesportiva reformada</figcaption></figure>
     </div>
 
     <div class="more">
@@ -718,8 +661,8 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     <div class="about-grid">
       <div class="portrait reveal left">
         <div class="frame">
-          <svg viewBox="0 0 100 100"><use href="#logo"/></svg>
-          <img src="img/michell.jpg" alt="Michell Patrick – Síndico Profissional" loading="lazy" onerror="this.remove()">
+          <img class="logo-ph" src="logo.png" alt="Logo MP Serviços">
+          <img class="photo" src="assets/img/michell-perfil.jpg" alt="Michell Patrick – Síndico Profissional" loading="lazy" onerror="this.remove()">
         </div>
         <div class="pbadge p1"><i data-lucide="graduation-cap"></i> MBA Controladoria e Auditoria</div>
         <div class="pbadge p2"><i data-lucide="badge-check"></i> Síndico Profissional (72h)</div>
@@ -914,7 +857,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
   <div class="container">
     <div class="f-grid">
       <div class="f-brand">
-        <svg viewBox="0 0 100 100"><use href="#logo"/></svg>
+        <img src="logo.png" alt="Logo MP Serviços">
         <b>MP Serviços</b>
         <p>Michell Patrick — Síndico Profissional. Gestão condominial com método, transparência e resultado.</p>
       </div>
@@ -945,12 +888,10 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
   </div>
 </footer>
 
-<!-- WhatsApp flutuante -->
 <a class="wa-float" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <span>Fale no WhatsApp</span><div class="bt"><i data-lucide="message-circle"></i></div>
 </a>
 
-<!-- Lightbox -->
 <div class="lb" id="lb"><button aria-label="Fechar"><i data-lucide="x"></i></button><img alt=""></div>
 <div class="toast" id="toast"><i data-lucide="check-circle-2"></i><span>Abrindo o WhatsApp com sua mensagem…</span></div>
 
@@ -959,14 +900,9 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 (function(){
   const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   $('#year').textContent=new Date().getFullYear();
-
-  /* ---- Blocos impermeabilizados (13) ---- */
   const bl=$('#blocks');
   for(let i=0;i<13;i++){const d=document.createElement('div');d.className='blk';d.style.setProperty('--d',(i*.09+.3)+'s');d.innerHTML='<i data-lucide="building-2"></i>';bl.appendChild(d)}
-
-  /* ---- Roda dos 5 pilares ---- */
   const NS='http://www.w3.org/2000/svg', R=110, C=2*Math.PI*R, N=5, GAP=10, SEG=C/N-GAP;
   const segG=$('#segs'), wbtns=$$('.wbtn'), prows=$$('.prow'), segs=[];
   for(let i=0;i<N;i++){
@@ -1003,8 +939,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     }else stopAuto();
   }),{threshold:.35});
   wheelIO.observe($('#wheel'));
-
-  /* ---- Contadores ---- */
   function countUp(el){
     const to=+el.dataset.count,pre=el.dataset.pre||'',suf=el.dataset.suf||'',dur=1800,t0=performance.now();
     if(reduce){return}
@@ -1018,14 +952,10 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     if(e.isIntersecting){countUp(e.target);cntIO.unobserve(e.target)}
   }),{threshold:.6});
   $$('[data-count]').forEach(el=>cntIO.observe(el));
-
-  /* ---- Revelar ao rolar ---- */
   const io=new IntersectionObserver(es=>es.forEach(e=>{
     if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
   }),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
   $$('.reveal,.steps').forEach(el=>io.observe(el));
-
-  /* ---- Header / progresso / menu ativo ---- */
   const header=$('#header'),prog=$('#progress');
   function onScroll(){
     const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
@@ -1038,7 +968,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))}
   }),{rootMargin:'-45% 0px -50% 0px'});
   $$('section[id]').forEach(s=>secIO.observe(s));
-
   const nav=$('#nav'),burger=$('#burger');
   function toggleMenu(open){
     nav.classList.toggle('open',open);
@@ -1049,8 +978,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
   }
   burger.addEventListener('click',()=>toggleMenu(!nav.classList.contains('open')));
   $$('#nav a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
-
-  /* ---- Brilho do mouse no hero ---- */
   const glow=$('#glow');
   if(!reduce&&matchMedia('(pointer:fine)').matches){
     $('.hero').addEventListener('mousemove',e=>{
@@ -1058,8 +985,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       glow.style.left=(e.clientX-r.left)+'px';glow.style.top=(e.clientY-r.top)+'px';
     });
   }
-
-  /* ---- FAQ ---- */
   $$('.qa').forEach(q=>{
     const b=$('button',q);
     b.addEventListener('click',()=>{
@@ -1068,8 +993,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       if(open){q.classList.add('open');b.setAttribute('aria-expanded','true')}
     });
   });
-
-  /* ---- Lightbox ---- */
   const lb=$('#lb'),lbImg=$('img',lb);
   $$('[data-lb]').forEach(f=>f.addEventListener('click',()=>{
     const im=$('img',f);
@@ -1077,8 +1000,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
   }));
   lb.addEventListener('click',()=>lb.classList.remove('open'));
   addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');toggleMenu(false)}});
-
-  /* ---- Formulário (abre WhatsApp com a mensagem pronta) ---- */
   const form=$('#form'),toast=$('#toast');
   const mailAlt=$('#mailAlt');
   function buildMsg(){
@@ -1104,8 +1025,6 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     form.reset();
   });
   $$('.fld input,.fld textarea').forEach(i=>i.addEventListener('input',()=>i.closest('.fld').classList.remove('err')));
-
-  /* ---- Ícones ---- */
   if(window.lucide)lucide.createIcons();
   else addEventListener('load',()=>window.lucide&&lucide.createIcons());
 })();
