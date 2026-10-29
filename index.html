@@ -116,14 +116,184 @@ section { padding: 80px 0; }
 .impacto p { font-size: 22px; font-style: italic; max-width: 820px; margin: 0 auto 16px; line-height: 1.6; }
 .impacto span { font-size: 14px; font-weight: 600; color: var(--azul-claro); letter-spacing: 1px; text-transform: uppercase; }
 
-/* ===== PROVA SOCIAL (KPIs) ===== */
-.prova-numeros { background: var(--cinza-claro); padding: 60px 0; }
-.grid-numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; }
-.stat-item { background: var(--branco); padding: 32px 20px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s; }
-.stat-item:hover { transform: translateY(-5px); border-color: var(--azul-claro); }
-.stat-icon { font-size: 32px; color: var(--azul-tecnico); margin-bottom: 12px; display: block; }
-.numero-destaque { font-size: 38px; font-weight: 800; color: var(--azul-institucional); line-height: 1.1; margin-bottom: 8px; }
-.numero-label { font-size: 12px; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+/* ===== RESULTADOS EM CAMPO: JARDIM PARADISO ANTÚRIO ===== */
+.resultados-anturio { background: var(--cinza-claro); padding: 80px 0; }
+
+/* Grid de 4 Cards */
+.grid-resultados-anturio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card-anturio {
+  background: var(--branco);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--borda);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-anturio:hover {
+  transform: translateY(-5px);
+  border-color: var(--azul-tecnico);
+  box-shadow: 0 12px 32px rgba(46, 90, 136, 0.15);
+}
+
+.card-anturio .icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--azul-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--azul-tecnico);
+  transition: all 0.3s ease;
+}
+
+.card-anturio:hover .icon-box {
+  background: var(--azul-tecnico);
+  color: var(--branco);
+  transform: scale(1.1);
+}
+
+.card-anturio .icon-box i {
+  font-size: 28px;
+}
+
+.card-anturio h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--azul-institucional);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.card-anturio h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cinza-metalico);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.card-anturio p {
+  font-size: 14px;
+  color: var(--texto-escuro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Bloco de Outras Melhorias */
+.outras-melhorias {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--borda);
+}
+
+.outras-melhorias h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul-institucional);
+  margin-bottom: 24px;
+}
+
+.outras-melhorias ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.outras-melhorias li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 15px;
+  color: var(--texto-escuro);
+  line-height: 1.5;
+}
+
+.outras-melhorias li .icon-check {
+  color: var(--azul-claro);
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: transform 0.2s ease;
+}
+
+.outras-melhorias li:hover .icon-check {
+  transform: scale(1.2);
+  color: var(--azul-tecnico);
+}
+
+/* Nova Grade de Outras Melhorias (5 cards) */
+.grid-outras-melhorias {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card-melhoria {
+  background: var(--branco);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card-melhoria:hover {
+  transform: translateY(-4px);
+  border-color: var(--azul-tecnico);
+  box-shadow: 0 8px 20px rgba(46, 90, 136, 0.1);
+}
+
+.card-melhoria i {
+  font-size: 28px;
+  color: var(--azul-tecnico);
+  margin-bottom: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-melhoria:hover i {
+  transform: scale(1.1);
+  color: var(--azul-institucional);
+}
+
+.card-melhoria p {
+  font-size: 12px;
+  color: var(--texto-escuro);
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsividade para os 5 cards */
+@media (max-width: 1100px) {
+  .grid-outras-melhorias { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .grid-outras-melhorias { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-outras-melhorias { grid-template-columns: 1fr; }
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .grid-resultados-anturio { grid-template-columns: 1fr; }
+}
 
 /* ===== SOBRE E COMPETÊNCIAS ===== */
 .sobre { background: var(--branco); }
@@ -418,10 +588,10 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
 </section>
 
 <!-- ===== RESULTADOS EM CAMPO: JARDIM PARADISO ANTÚRIO ===== -->
-<section class="resultados-anturio" id="resultados" style="background: var(--cinza-claro); padding: 80px 0;">
+<section class="resultados-anturio" id="resultados">
   <div class="container">
     
-    <!-- Cabeçalho da Seção com Logo -->
+    <!-- Cabeçalho da Seção -->
     <div style="text-align: center; margin-bottom: 48px;">
       <img src="assets/img/logo-anturio.png" alt="Condomínio Jardim Paradiso Antúrio" style="height: 70px; width: auto; margin-bottom: 16px; display: inline-block;">
       <h2 class="section-title">Resultados em Campo</h2>
@@ -429,60 +599,44 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
     </div>
 
     <!-- Grade de 4 Cards Quantificados -->
-    <div class="grid-resultados" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 48px;">
+    <div class="grid-resultados-anturio">
       
       <!-- Card 1: Financeiro -->
-      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
-        <i class="ph-bold ph-currency-circle-dollar" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
-        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">R$ 36 mil</div>
-        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Economizados / ano</div>
-        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Revisão de contratos de prestação de serviço.</p>
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 0% de aumento de taxa (4 anos)</p>
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 30% de receita extra (inadimplência)</p>
-        </div>
+      <div class="card-anturio">
+        <div class="icon-box"><i class="ph-bold ph-currency-circle-dollar"></i></div>
+        <h3>R$ 36 mil</h3>
+        <h4>Economizados / ano</h4>
+        <p>Revisão de contratos de serviços terceirizados para reduzir custos.</p>
       </div>
 
       <!-- Card 2: Infraestrutura -->
-      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
-        <i class="ph-bold ph-buildings" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
-        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">13 Blocos</div>
-        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Impermeabilizados</div>
-        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Eliminação de infiltrações (26 unidades A/B).</p>
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 100% dos blocos com CFTV</p>
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Reforma do complexo administrativo a custo zero</p>
-        </div>
+      <div class="card-anturio">
+        <div class="icon-box"><i class="ph-bold ph-buildings"></i></div>
+        <h3>13 Blocos</h3>
+        <h4>Impermeabilizados</h4>
+        <p>Obra para eliminar infiltrações e proteger o patrimônio.</p>
       </div>
 
-      <!-- Card 3: Governança -->
-      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
-        <i class="ph-bold ph-scales" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
-        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">4 Anos</div>
-        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">De gestão</div>
-        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Com processos documentados e rastreáveis.</p>
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 4 ganhos em uma única ação (reforma da lixeira)</p>
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Regimento interno adequado (3º portão)</p>
-        </div>
+      <!-- Card 3: Segurança -->
+      <div class="card-anturio">
+        <div class="icon-box"><i class="ph-bold ph-shield-check"></i></div>
+        <h3>100%</h3>
+        <h4>Dos Blocos com CFTV</h4>
+        <p>Revitalização do monitoramento e melhorias no controle de acesso e na proteção perimetral.</p>
       </div>
 
-      <!-- Card 4: Comunidade -->
-      <div class="card-resultado" style="background: var(--branco); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; transition: transform 0.2s;">
-        <i class="ph-bold ph-users-three" style="font-size: 48px; color: var(--azul-tecnico); margin-bottom: 16px; display: block;"></i>
-        <div style="font-size: 42px; font-weight: 800; color: var(--azul-institucional); line-height: 1; margin-bottom: 8px;">2 Eventos</div>
-        <div style="font-size: 14px; font-weight: 700; color: var(--cinza-metalico); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Sociais</div>
-        <p style="font-size: 13px; color: var(--texto-escuro); line-height: 1.5; margin: 0;">Carnaval Infantil e exibição dos jogos da Copa 2022.</p>
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--borda); font-size: 12px; color: var(--cinza-metalico); text-align: left;">
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> 2 bancos de socialização</p>
-          <p style="margin-bottom: 4px;"><i class="ph-bold ph-check" style="color: var(--azul-tecnico);"></i> Playground reformado</p>
-        </div>
+      <!-- Card 4: Governança -->
+      <div class="card-anturio">
+        <div class="icon-box"><i class="ph-bold ph-calendar-check"></i></div>
+        <h3>4 Anos</h3>
+        <h4>De Gestão</h4>
+        <p>Processos documentados, controles administrativos e melhorias na rotina condominial.</p>
       </div>
 
     </div>
 
-    <!-- Grid de Fotos (Abaixo dos Cards) -->
-    <div class="grid-fotos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+    <!-- Grid de Fotos (Meio) -->
+    <div class="grid-fotos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; margin-bottom: 48px;">
       <div class="foto-card" style="background: var(--branco); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
         <img src="assets/img/portaria.jpg" alt="Portaria revitalizada do Condomínio Jardim Paradiso Antúrio" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; display: block;">
         <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Portaria revitalizada</div>
@@ -493,7 +647,40 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
       </div>
       <div class="foto-card" style="background: var(--branco); border-radius: 10px; overflow: hidden; border: 1px solid var(--borda); transition: transform 0.2s;">
         <img src="assets/img/quadra_poliesportiva.jpg" alt="Quadra poliesportiva reformada do Condomínio Jardim Paradiso Antúrio" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; display: block;">
-        <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Quadra poliesportiva</div>
+        <div style="padding: 16px; text-align: center; font-size: 14px; font-weight: 600; color: var(--azul-institucional);">Quadra poliesportiva reformada</div>
+      </div>
+    </div>
+
+    <!-- Subseção: Outras Melhorias (5 Cards Lado a Lado) -->
+    <div class="outras-melhorias">
+      <h3>Outras melhorias realizadas</h3>
+      <div class="grid-outras-melhorias">
+        
+        <div class="card-melhoria">
+          <i class="ph-bold ph-buildings"></i>
+          <p>Reforma do complexo administrativo sem custo para o condomínio.</p>
+        </div>
+        
+        <div class="card-melhoria">
+          <i class="ph-bold ph-trash"></i>
+          <p>Reorganização dos espaços e solução de quatro problemas com uma única reforma da lixeira.</p>
+        </div>
+        
+        <div class="card-melhoria">
+          <i class="ph-bold ph-drop"></i>
+          <p>Melhorias no abastecimento de água, na piscina, na quadra e no playground.</p>
+        </div>
+        
+        <div class="card-melhoria">
+          <i class="ph-bold ph-clipboard-text"></i>
+          <p>Implantação de controles de gás, advertências, multas e encomendas.</p>
+        </div>
+        
+        <div class="card-melhoria">
+          <i class="ph-bold ph-confetti"></i>
+          <p>Realização de eventos de integração entre moradores.</p>
+        </div>
+
       </div>
     </div>
 
