@@ -97,7 +97,7 @@ section { padding: 80px 0; }
 .hero {
   padding: 160px 0 100px;
   position: relative;
-  background: linear-gradient(rgba(15, 34, 51, 0.75), rgba(15, 34, 51, 0.75)), url('assets/img/fundo-condominio.jpg');
+  background: linear-gradient(rgba(15, 34, 51, 0.65), rgba(15, 34, 51, 0.65)), url('assets/img/fundo-condominio.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -106,8 +106,8 @@ section { padding: 80px 0; }
 .hero .container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 2; }
 .hero-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--branco); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; padding: 6px 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; background: rgba(15, 34, 51, 0.5); }
 .hero h1 { font-size: 38px; text-align: left; margin-bottom: 16px; color: var(--branco) !important; line-height: 1.2; font-weight: 800; }
-.hero .hero-resposta { font-size: 38px; text-align: left; margin: 0 0 24px 0; color: var(--branco) !important; font-weight: 800; line-height: 1.2; }
-.hero .hero-pergunta { font-size: 38px; text-align: left; margin: 0 0 24px 0; color: var(--azul-claro) !important; font-weight: 800; line-height: 1.2; }
+.hero .hero-pergunta { font-size: 42px; text-align: left; margin: 0 0 16px 0; color: var(--azul-claro) !important; font-weight: 800; line-height: 1.1; }
+.hero .hero-resposta-menor { font-size: 18px; text-align: left; margin: 0 0 24px 0; color: var(--branco) !important; font-weight: 500; line-height: 1.6; max-width: 600px; }
 .hero .hero-assinatura { text-align: left; margin: 0 0 30px 0; font-size: 18px; color: var(--branco) !important; font-weight: 600; }
 .hero-foto { flex: 0 0 300px; display: flex; justify-content: center; }
 .hero-foto img { width: 280px; height: 280px; border-radius: 50%; border: 4px solid var(--branco); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); object-fit: cover; object-position: center 15%; }
@@ -373,7 +373,6 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
     </nav>
   </div>
 </header>
-
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
@@ -382,19 +381,19 @@ footer { background: var(--azul-institucional); border-top: 1px solid rgba(255,2
     <div style="flex: 1; min-width: 300px; text-align: left;">
       <span class="hero-eyebrow">MP Serviços · Gestão Condominial Profissional</span>
       
-      <!-- A Resposta (Destaque, Tamanho Grande, Cor Escura) -->
-      <h1 class="hero-resposta">
-        Se o seu condomínio precisa de gestão com método, transparência e resultado, eu posso te ajudar com isso!
-      </h1>
-      
-      <!-- A Pergunta (Tamanho Igual, Cor Azul) -->
+      <!-- 1. A Pergunta (Destaque em Azul) -->
       <p class="hero-pergunta">
         Tá precisando de síndico profissional?
       </p>
       
-      <!-- Frase de Assinatura -->
+      <!-- 2. A Resposta (Preto, Fonte Menor) -->
+      <p class="hero-resposta-menor">
+        Se o seu condomínio precisa de gestão com método, transparência e resultado, eu posso te ajudar com isso! Possuo Formação para servir e experiência para resolver.
+      </p>
+      
+      <!-- 3. O Texto de Fechamento (Formato Original) -->
       <p class="hero-assinatura">
-        Possuo Formação para servir e experiência para resolver.
+        O síndico profissional preserva a autonomia dos condôminos em decidir. Faz uma gestão condominial com profissionalismo, método e transparência — do diagnóstico à contabilização, nada fica descoberto.
       </p>
       
       <div class="hero-buttons" style="justify-content: flex-start;">
