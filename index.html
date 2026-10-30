@@ -130,7 +130,11 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .fcard{position:absolute;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);box-shadow:0 20px 40px -15px rgba(0,0,0,.6);animation:float 6s ease-in-out infinite;white-space:nowrap}
 .fcard .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
 .fcard b{display:block;font-size:1.05rem;line-height:1.1}.fcard small{font-size:.68rem;color:#b6c8d8;font-weight:500}
-.fcard.c1{top:6%;left:-6%}.fcard.c2{top:44%;right:-8%;animation-delay:-2s}.fcard.c3{bottom:4%;left:2%;animation-delay:-4s}
+.fcard.c1{top:2%;left:-8%;animation-delay:0s}
+.fcard.c2{top:38%;right:-12%;animation-delay:-1.2s}
+.fcard.c3{bottom:4%;left:-2%;animation-delay:-2.4s}
+.fcard.c4{top:25%;left:-10%;animation-delay:-3.6s}
+.fcard.c5{bottom:18%;right:-8%;animation-delay:-4.8s}
 @keyframes float{50%{transform:translateY(-14px)}}
 .scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;width:26px;height:42px;border:2px solid rgba(255,255,255,.35);border-radius:20px;display:flex;justify-content:center;padding-top:7px}
 .scroll-hint::after{content:"";width:4px;height:8px;border-radius:4px;background:var(--cyan);animation:wheel 1.8s infinite}
@@ -284,8 +288,18 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .portrait::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--cyan);border-radius:38px;opacity:.5;z-index:0}
 .portrait .frame{z-index:1}
 .pbadge{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;background:#fff;padding:11px 16px;border-radius:14px;box-shadow:0 18px 36px -12px rgba(12,27,41,.4);font-size:.78rem;font-weight:700;animation:float 7s ease-in-out infinite}
-.pbadge i{color:var(--blue-600)}
-.pbadge.p1{right:-5%;top:12%}.pbadge.p2{left:-5%;bottom:10%;animation-delay:-3s}
+/* Posicionamento dos cards na seção Sobre */
+.portrait .fcard{position:absolute;z-index:10;white-space:nowrap;padding:8px 10px;gap:8px}
+.fcard.pos-1{left:-5%;top:8%;animation-delay:0s}
+.fcard.pos-2{left:-5%;bottom:8%;animation-delay:-1.5s}
+.fcard.pos-3{right:-5%;bottom:30%;animation-delay:-3s}
+.fcard.pos-4{right:-5%;top:18%;animation-delay:-4.5s}
+
+@media(max-width:900px){
+  .portrait .fcard{white-space:normal;width:max-content;max-width:180px;font-size:.65rem;padding:10px 14px}
+  .fcard.pos-1{left:0;top:5%}.fcard.pos-2{left:0;bottom:5%}
+  .fcard.pos-3{right:0;bottom:25%}.fcard.pos-4{right:0;top:18%}
+}
 .about h2{margin-bottom:22px}
 .about p{color:var(--muted);margin-bottom:16px}.about p strong{color:var(--ink)}
 .trail{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
@@ -328,7 +342,17 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .why .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 12px 24px -8px rgba(76,194,240,.5)}
 .why h3{font-size:1.1rem;margin-bottom:10px;color:#fff}.why p{color:#aec2d3;font-size:.92rem}
 @media(max-width:960px){.why-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
-.tools-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(26px,4vw,50px);align-items:start}
+/* ===== SEÇÃO ARTIGOS / CONHECIMENTO ===== */
+.artigos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:34px}
+.artigo-card{display:flex;flex-direction:column;padding:30px;border-radius:var(--r);background:#fff;border:1px solid var(--line);transition:.45s;position:relative;overflow:hidden;box-shadow:0 10px 30px -15px rgba(12,27,41,.05)}
+.artigo-card:hover{transform:translateY(-8px);border-color:rgba(63,123,191,.4);box-shadow:var(--shadow)}
+.artigo-card .fonte{font-size:.68rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-600);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.artigo-card h3{font-size:1.15rem;line-height:1.35;color:var(--ink);margin-bottom:12px}
+.artigo-card p{color:var(--muted);font-size:.9rem;flex:1;margin-bottom:20px}
+.artigo-card a{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.88rem;color:var(--blue-600);align-self:flex-start}
+.artigo-card a i{transition:transform .3s}
+.artigo-card a:hover i{transform:translateX(6px)}
+@media(max-width:900px){.artigos-grid{grid-template-columns:1fr}}
 .mock{position:sticky;top:100px;border-radius:26px;background:var(--navy-900);color:#fff;padding:20px 22px 24px;box-shadow:0 40px 70px -30px rgba(12,27,41,.7);border:1px solid rgba(255,255,255,.08)}
 .mock .bar{display:flex;gap:7px;align-items:center;margin-bottom:18px}
 .mock .bar span{width:11px;height:11px;border-radius:50%;background:#ff5f57}.mock .bar span:nth-child(2){background:#febc2e}.mock .bar span:nth-child(3){background:#28c840}
@@ -350,6 +374,7 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .tcard .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(63,123,191,.14),rgba(76,194,240,.22));color:var(--blue-600);margin-bottom:14px;transition:.4s}
 .tcard:hover .ic{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transform:rotate(-8deg) scale(1.08)}
 .tcard h4{font-size:.98rem;margin-bottom:6px}.tcard p{font-size:.86rem;color:var(--muted);line-height:1.55}
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 @media(max-width:960px){.tools-grid{grid-template-columns:1fr}.mock{position:relative;top:0}}@media(max-width:560px){.tgrid{grid-template-columns:1fr}}
 .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .act{padding:36px 30px;border-radius:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.45s}
@@ -478,9 +503,11 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
     <div class="hero-visual reveal" style="--d:.3s" aria-hidden="true">
       <div class="orbit o2"></div><div class="orbit o1"></div>
       <div class="core"><img src="logo.png" alt="Logo MP Serviços"></div>
-      <div class="fcard c1"><span class="ic"><i data-lucide="trending-down"></i></span><span><b>R$ 36 mil</b><small>economizados / ano</small></span></div>
-      <div class="fcard c2"><span class="ic"><i data-lucide="cctv"></i></span><span><b>100%</b><small>dos blocos com CFTV</small></span></div>
-      <div class="fcard c3"><span class="ic"><i data-lucide="file-check-2"></i></span><span><b>148</b><small>prestações de contas aprovadas</small></span></div>
+      <div class="fcard c1"><span class="ic"><i data-lucide="users"></i></span><span><b>Assembleia</b><small>Virtual, Híbrida ou On-Line</small></span></div>
+      <div class="fcard c2"><span class="ic"><i data-lucide="calculator"></i></span><span><b>Plan. Ora</b><small>Realista e executável</small></span></div>
+      <div class="fcard c3"><span class="ic"><i data-lucide="scale"></i></span><span><b>Regimento</b><small>Convenção cumprida à risca</small></span></div>
+      <div class="fcard c4"><span class="ic"><i data-lucide="wrench"></i></span><span><b>Manutenção</b><small>Preservação do Patrimônio</small></span></div>
+      <div class="fcard c5"><span class="ic"><i data-lucide="banknote"></i></span><span><b>Finanças</b><small>Respeito a cada centavo</small></span></div>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true"></div>
@@ -653,9 +680,9 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
         <div class="mitem reveal" style="--d:.05s"><span class="mi"><i data-lucide="recycle"></i></span><span>Reorganização dos espaços e solução de quatro problemas com uma única reforma da lixeira.</span></div>
         <div class="mitem reveal" style="--d:.1s"><span class="mi"><i data-lucide="droplet"></i></span><span>Eliminação da falta de água com 11 Melhorias realizadas no abastecimento de água.</span></div>
         <div class="mitem reveal" style="--d:.15s"><span class="mi"><i data-lucide="clipboard-check"></i></span><span>Implantação de controles de bombas, advertências, multas e encomendas.</span></div>
-        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Troca do piso da piscina evitando acidentes.</span></div>
-        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Reforma do Playgroud e quadra poliesportiva a baixo custo</span></div>
-        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Reestruturação do SPDA e troca de mangueiras - AVCB</span></div>
+        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="shield-alert"></i></span><span>Troca do piso da piscina evitando acidentes.</span></div>
+        <div class="mitem reveal" style="--d:.25s"><span class="mi"><i data-lucide="construction"></i></span><span>Reforma do Playground e quadra poliesportiva a baixo custo.</span></div>
+        <div class="mitem reveal" style="--d:.3s"><span class="mi"><i data-lucide="zap"></i></span><span>Reestruturação do SPDA e troca de mangueiras - AVCB.</span></div>
       </div>
     </div>
   </div>
@@ -670,8 +697,10 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
           <img class="logo-ph" src="logo.png" alt="Logo MP Serviços">
           <img class="photo" src="assets/img/michell-perfil.jpg" alt="Michell Patrick – Síndico Profissional" loading="lazy" onerror="this.remove()">
         </div>
-        <div class="pbadge p1"><i data-lucide="graduation-cap"></i> MBA Controladoria e Auditoria</div>
-        <div class="pbadge p2"><i data-lucide="badge-check"></i> Síndico Profissional (72h)</div>
+        <div class="fcard pos-1"><span class="ic"><i data-lucide="eye"></i></span><span><b>Transparência</b><small>Comunicação clara e objetiva</small></span></div>
+        <div class="fcard pos-2"><span class="ic"><i data-lucide="banknote"></i></span><span><b>Gestão Financeira</b><small>Respeito a cada centavo</small></span></div>
+        <div class="fcard pos-3"><span class="ic"><i data-lucide="handshake"></i></span><span><b>Mediação Imparcial</b><small>Resolução de conflitos</small></span></div>
+        <div class="fcard pos-4"><span class="ic"><i data-lucide="zap"></i></span><span><b>Proativo</b><small>Foco em soluções</small></span></div>
       </div>
       <div>
         <span class="eyebrow reveal">Sobre</span>
@@ -733,6 +762,52 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <article class="why reveal" data-n="04"><div class="ic"><i data-lucide="user-check"></i></div><h3>Isenção e método</h3><p>Síndico profissional não mora no condomínio, não tem conflito de interesse e governa por processo.</p></article>
       <article class="why reveal" data-n="05" style="--d:.08s"><div class="ic"><i data-lucide="cpu"></i></div><h3>Tecnologia e processos rastreáveis</h3><p>Aplicações web e automações próprias (Apps Script + HTML, AppSheet) para que tudo seja rastreável.</p></article>
       <article class="why reveal" data-n="06" style="--d:.16s"><div class="ic"><i data-lucide="handshake"></i></div><h3>Respeito à autonomia</h3><p>Condomínio é empresa, tem CNPJ, tem autonomia. As propostas são personalizadas.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONHECIMENTO ================= -->
+<section class="section light" id="conhecimento">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">Conhecimento Condominial</span>
+      <h2>Artigos e <span class="acc">Referências</span></h2>
+      <p class="lead">Curadoria de conteúdos externos sobre gestão, legislação e boas práticas condominiais. Material para quem quer se aprofundar.</p>
+    </div>
+    <div class="artigos-grid">
+      
+      <!-- CARD 1: MODELO PARA PREENCHER -->
+      <article class="artigo-card reveal">
+        <div class="fonte"><i data-lucide="globe"></i> Condofy</div>
+        <h3>Como escolher um bom síndico profissional</h3>
+        <p>Guia completo sobre os critérios técnicos, comportamentais e contratuais para uma contratação segura.</p>
+        <a href="https://www.condofy.com.br/articles/como-escolher-sindico-profissional" target="_blank" rel="noopener">Ler artigo completo <i data-lucide="arrow-up-right"></i></a>
+      </article>
+
+      <!-- CARD 2: MODELO PARA PREENCHER -->
+      <article class="artigo-card reveal" style="--d:.08s">
+        <div class="fonte"><i data-lucide="globe"></i> Bela Gestão</div>
+        <h3>A Importância da Comunicação Transparente entre Síndico e Condôminos</h3>
+        <p>Mostra como clareza financeira, canais de diálogo e acesso às informações fortalecem a confiança e ajudam a reduzir conflitos.</p>
+        <a href="https://belagestao.com.br/a-importancia-da-comunicacao-transparente-entre-sindico-e-condominos/" target="_blank" rel="noopener">Ler artigo completo <i data-lucide="arrow-up-right"></i></a>
+      </article>
+
+      <!-- CARD 3: MODELO PARA PREENCHER -->
+      <article class="artigo-card reveal" style="--d:.16s">
+        <div class="fonte"><i data-lucide="globe"></i> Acesso Administração</div>
+        <h3>Síndico profissional: o que faz e quando vale a pena contratar</h3>
+        <p>Explica as atribuições do síndico profissional e traz critérios práticos de contratação, como referências, disponibilidade, prestação de contas e definição do escopo de trabalho.</p>
+        <a href="https://acessoadm.com.br/blog/sindico-profissional.html" target="_blank" rel="noopener">Ler artigo completo <i data-lucide="arrow-up-right"></i></a>
+      </article>
+
+      <!-- CARD 4: MODELO PARA PREENCHER -->
+      <article class="artigo-card reveal" style="--d:.24s">
+        <div class="fonte"><i data-lucide="globe"></i> Fundação Santo André</div>
+        <h3>A profissão de síndico profissional</h3>
+        <p>Aborda os desafios técnicos e comportamentais da função, incluindo empatia, escuta ativa, autocontrole e capacidade de lidar com conflitos.</p>
+        <a href="https://www.fsa.br/sindico-profissional-carreira-gestao-condominial/" target="_blank" rel="noopener">Ler artigo completo <i data-lucide="arrow-up-right"></i></a>
+      </article>
+
     </div>
   </div>
 </section>
