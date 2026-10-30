@@ -49,6 +49,9 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 section[id]{scroll-margin-top:80px}
 .container{width:min(1180px,92%);margin-inline:auto}
 i[data-lucide],svg.lucide{width:1.25em;height:1.25em;stroke-width:2;flex-shrink:0}
+/* Ícone oficial do WhatsApp */
+.icone-wa{width:1.25em;height:1.25em;fill:currentColor;flex-shrink:0;display:inline-block;vertical-align:middle}
+.wa-float .bt .icone-wa{width:30px;height:30px}
 .section{padding:clamp(72px,9vw,120px) 0;position:relative}
 .dark{background:var(--navy-900);color:#e9f0f6}
 .light{background:var(--bg)}
@@ -144,6 +147,9 @@ nav a.link:hover,nav a.link.active{color:#fff}nav a.link:hover::after,nav a.link
 .strip-item .ic{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(63,123,191,.14),rgba(76,194,240,.2));color:var(--blue-600)}
 .strip-item b{font-size:1.7rem;font-weight:800;line-height:1;display:block}
 .strip-item small{font-size:.76rem;color:var(--muted);font-weight:500;line-height:1.3;display:block;margin-top:4px}
+/* Ajuste para os novos textos da faixa */
+.strip-item b{font-size:1.4rem;letter-spacing:-.02em}
+.strip-item small{font-size:.8rem;line-height:1.4}
 @media(max-width:900px){.strip-grid{grid-template-columns:1fr 1fr}.strip-item:nth-child(2){border-right:0}.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.strip-item{padding:20px 16px;flex-direction:column;text-align:center;gap:10px}}
 .quote{padding:clamp(80px,10vw,130px) 0 clamp(60px,8vw,100px);text-align:center;position:relative;overflow:hidden}
 .quote .qmark{width:64px;height:64px;color:var(--cyan);opacity:.9;margin:0 auto 22px;display:block}
@@ -442,7 +448,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
         <li><a class="link" href="#ferramentas">Ferramentas</a></li>
         <li><a class="link" href="#para-quem">Para quem</a></li>
         <li><a class="link" href="#faq">FAQ</a></li>
-        <li><a class="btn btn-wa nav-cta" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a></li>
+        <li><a class="btn btn-wa nav-cta" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener"><svg class="icone-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp</a></li>
       </ul>
     </nav>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><i data-lucide="menu"></i></button>
@@ -461,12 +467,10 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <p class="reveal" style="--d:.2s">Se o seu condomínio precisa de gestão com método, transparência e resultado, eu posso te ajudar com isso! Possuo <strong>formação para servir</strong> e <strong>experiência para resolver</strong>.</p>
       <p class="reveal" style="--d:.28s">O síndico profissional preserva a autonomia dos condôminos em decidir. Faz uma gestão condominial com profissionalismo, método e transparência — do diagnóstico à contabilização, nada fica descoberto.</p>
       <div class="hero-actions reveal" style="--d:.36s">
-        <a class="btn btn-wa" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Agendar diagnóstico no WhatsApp</a>
+        <a class="btn btn-wa" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener"><svg class="icone-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Agendar diagnóstico no WhatsApp</a>
         <a class="btn btn-ghost" href="#resultados"><i data-lucide="bar-chart-3"></i> Ver resultados reais</a>
       </div>
       <div class="chips reveal" style="--d:.44s">
-        <span class="chip"><i data-lucide="award"></i> +20 anos de experiência</span>
-        <span class="chip"><i data-lucide="graduation-cap"></i> MBA em Controladoria e Auditoria</span>
         <span class="chip"><i data-lucide="map-pin"></i> Manaus/AM</span>
       </div>
     </div>
@@ -486,10 +490,10 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 <div class="strip">
   <div class="container">
     <div class="strip-grid reveal">
-      <div class="strip-item"><span class="ic"><i data-lucide="award"></i></span><div><b data-count="20" data-pre="+" data-suf=" anos">+20 anos</b><small>em gestão financeira, controladoria e auditoria</small></div></div>
-      <div class="strip-item"><span class="ic"><i data-lucide="piggy-bank"></i></span><div><b data-count="36" data-pre="R$ " data-suf=" mil">R$ 36 mil</b><small>economizados por ano em um condomínio</small></div></div>
-      <div class="strip-item"><span class="ic"><i data-lucide="badge-check"></i></span><div><b data-count="10">10</b><small>auditorias externas aprovadas</small></div></div>
-      <div class="strip-item"><span class="ic"><i data-lucide="file-check-2"></i></span><div><b data-count="148">148</b><small>prestações de contas aprovadas</small></div></div>
+      <div class="strip-item"><span class="ic"><i data-lucide="briefcase"></i></span><div><b data-count="20" data-pre="+">Administração</b><small>Gestão profissional, transparente e personalizada.</small></div></div>
+      <div class="strip-item"><span class="ic"><i data-lucide="users"></i></span><div><b>Condômino</b><small>Condômino é parceiro e atua dentro das decisões.</small></div></div>
+      <div class="strip-item"><span class="ic"><i data-lucide="scale"></i></span><div><b>Autonomia</b><small>A autonomia do condomínio em decidir é preservada.</small></div></div>
+      <div class="strip-item"><span class="ic"><i data-lucide="trending-up"></i></span><div><b>Desenvolvimento</b><small>Tudo parte das necessidades dos condôminos e do condomínio.</small></div></div>
     </div>
   </div>
 </div>
@@ -647,9 +651,11 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <div class="more-grid">
         <div class="mitem hl reveal"><span class="mi"><i data-lucide="building-2"></i></span><span>Reforma do complexo administrativo <small>sem custo para o condomínio</small></span></div>
         <div class="mitem reveal" style="--d:.05s"><span class="mi"><i data-lucide="recycle"></i></span><span>Reorganização dos espaços e solução de quatro problemas com uma única reforma da lixeira.</span></div>
-        <div class="mitem reveal" style="--d:.1s"><span class="mi"><i data-lucide="droplet"></i></span><span>Melhorias no abastecimento de água, na piscina, na quadra e no playground.</span></div>
-        <div class="mitem reveal" style="--d:.15s"><span class="mi"><i data-lucide="clipboard-check"></i></span><span>Implantação de controles de gás, advertências, multas e encomendas.</span></div>
-        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Realização de eventos de integração entre moradores.</span></div>
+        <div class="mitem reveal" style="--d:.1s"><span class="mi"><i data-lucide="droplet"></i></span><span>Eliminação da falta de água com 11 Melhorias realizadas no abastecimento de água.</span></div>
+        <div class="mitem reveal" style="--d:.15s"><span class="mi"><i data-lucide="clipboard-check"></i></span><span>Implantação de controles de bombas, advertências, multas e encomendas.</span></div>
+        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Troca do piso da piscina evitando acidentes.</span></div>
+        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Reforma do Playgroud e quadra poliesportiva a baixo custo</span></div>
+        <div class="mitem reveal" style="--d:.2s"><span class="mi"><i data-lucide="users"></i></span><span>Reestruturação do SPDA e troca de mangueiras - AVCB</span></div>
       </div>
     </div>
   </div>
@@ -889,7 +895,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 </footer>
 
 <a class="wa-float" href="https://wa.me/5592985537155?text=Ol%C3%A1%2C%20Michell!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20o%20meu%20condom%C3%ADnio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <span>Fale no WhatsApp</span><div class="bt"><i data-lucide="message-circle"></i></div>
+  <span>Fale no WhatsApp</span><div class="bt"><svg class="icone-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
 </a>
 
 <div class="lb" id="lb"><button aria-label="Fechar"><i data-lucide="x"></i></button><img alt=""></div>
