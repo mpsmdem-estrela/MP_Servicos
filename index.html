@@ -106,12 +106,16 @@ nav a.link:hover::before,nav a.link:hover::after{opacity:1;transform:translateX(
 }
 .nav-cta{padding:11px 20px;font-size:.84rem;border-radius:12px}
 .burger{display:none;color:#fff;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2)}
-@media(max-width:1020px){
+@media(max-width:1150px){
   .burger{display:inline-flex;position:relative;z-index:120}
   nav{position:fixed;inset:0;background:rgba(7,18,28,.97);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:110}
   nav.open{transform:none}
-  nav ul{flex-direction:column;gap:22px;text-align:center}
-  nav a.link{font-size:1.3rem}
+  nav ul{flex-direction:column;gap:16px;text-align:center}
+  nav a.link{font-size:1.3rem;padding:12px 24px;width:100%;max-width:300px;margin:0 auto}
+  nav a.link i{display:none}
+  nav a.link span{display:block}
+  nav a.link::before,nav a.link::after{display:none}
+  nav a.link:hover,nav a.link.active{background:rgba(255,255,255,.1)}
 }
 .hero{min-height:100svh;background:var(--navy-950);color:#fff;position:relative;overflow:hidden;display:flex;align-items:center;padding:130px 0 150px}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(76,194,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(76,194,240,.07) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
@@ -538,7 +542,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
 <div class="strip">
   <div class="container">
     <div class="strip-grid reveal">
-      <div class="strip-item"><span class="ic"><i data-lucide="briefcase"></i></span><div><b data-count="20" data-pre="+">Administração</b><small>Gestão profissional, transparente e personalizada.</small></div></div>
+      <div class="strip-item"><span class="ic"><i data-lucide="briefcase"></i></span><div><b>Administração</b><small>Gestão profissional, transparente e personalizada.</small></div></div>
       <div class="strip-item"><span class="ic"><i data-lucide="users"></i></span><div><b>Condômino</b><small>Condômino é parceiro e atua dentro das decisões.</small></div></div>
       <div class="strip-item"><span class="ic"><i data-lucide="scale"></i></span><div><b>Autonomia</b><small>A autonomia do condomínio em decidir é preservada.</small></div></div>
       <div class="strip-item"><span class="ic"><i data-lucide="trending-up"></i></span><div><b>Desenvolvimento</b><small>Tudo parte das necessidades dos condôminos e do condomínio.</small></div></div>
@@ -745,7 +749,7 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <div>
         <span class="eyebrow reveal">Sobre</span>
         <h2 class="reveal">Michell Patrick<br><span class="acc">Síndico Profissional</span></h2>
-        <p class="reveal">Administrador com <strong>mais de 20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor. Formou-se síndico profissional e em administração de condomínios, antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal.</p>
+        <p class="reveal">Administrador com <strong>mais de 20 anos de experiência</strong> em gestão financeira, controladoria e auditoria, com trajetória na indústria (Moto Honda, Hitachi Astemo) e no terceiro setor. Fez o curso presencial de síndico profissional e administrador de condomínios em São Paulo (2018), antes de assumir a gestão do Condomínio Residencial Jardim Paradiso Antúrio, onde atuou por 4 anos e também como conselheiro fiscal por mais 5 anos antes.</p>
         <p class="reveal">Um gestor que se tornou síndico, que construiu sua trajetória transformando propósitos em lucros nas indústrias, doações em projetos sociais no terceiro setor e cotas condominiais em qualidade de vida. <strong>Não trabalho com "achismos"</strong> — cada decisão tem método, lastro técnico e respaldo documental.</p>
         <div class="trail">
           <div class="reveal"><i data-lucide="factory"></i><b>Indústria</b><small>Propósitos em lucros · Moto Honda, Hitachi Astemo</small></div>
