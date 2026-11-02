@@ -108,14 +108,14 @@ nav a.link:hover::before,nav a.link:hover::after{opacity:1;transform:translateX(
 .burger{display:none;color:#fff;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.2)}
 @media(max-width:1150px){
   .burger{display:inline-flex;position:relative;z-index:120}
-  nav{position:fixed;inset:0;background:rgba(7,18,28,.97);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:110}
-  nav.open{transform:none}
-  nav ul{flex-direction:column;gap:16px;text-align:center}
-  nav a.link{font-size:1.3rem;padding:12px 24px;width:100%;max-width:300px;margin:0 auto}
+  nav{position:fixed;inset:0;background:rgba(7,18,28,.98);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;transform:translateY(-100%);visibility:hidden;opacity:0;transition:transform .5s cubic-bezier(.7,0,.2,1), opacity .5s, visibility .5s;z-index:110}
+  nav.open{transform:none;visibility:visible;opacity:1}
+  nav ul{flex-direction:column;gap:16px;text-align:center;width:100%;padding:0 20px}
+  nav a.link{font-size:1.3rem;padding:12px 24px;width:100%;max-width:300px;margin:0 auto;background:rgba(255,255,255,.05)}
   nav a.link i{display:none}
   nav a.link span{display:block}
   nav a.link::before,nav a.link::after{display:none}
-  nav a.link:hover,nav a.link.active{background:rgba(255,255,255,.1)}
+  nav a.link:hover,nav a.link.active{background:rgba(255,255,255,.15)}
 }
 .hero{min-height:100svh;background:var(--navy-950);color:#fff;position:relative;overflow:hidden;display:flex;align-items:center;padding:130px 0 150px}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(76,194,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(76,194,240,.07) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
@@ -529,9 +529,9 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       <div class="orbit o2"></div><div class="orbit o1"></div>
       <div class="core"><img src="logo.png" alt="Logo MP Serviços"></div>
       <div class="fcard c1"><span class="ic"><i data-lucide="users"></i></span><span><b>Assembleia</b><small>Virtual, Híbrida ou On-Line</small></span></div>
-      <div class="fcard c2"><span class="ic"><i data-lucide="calculator"></i></span><span><b>Plan. Ora</b><small>Realista e executável</small></span></div>
-      <div class="fcard c3"><span class="ic"><i data-lucide="scale"></i></span><span><b>Regimento</b><small>Convenção cumprida à risca</small></span></div>
-      <div class="fcard c4"><span class="ic"><i data-lucide="wrench"></i></span><span><b>Manutenção</b><small>Preservação do Patrimônio</small></span></div>
+      <div class="fcard c2"><span class="ic"><i data-lucide="calculator"></i></span><span><b>Plan. Orça</b><small>Realista e executável</small></span></div>
+      <div class="fcard c3"><span class="ic"><i data-lucide="scale"></i></span><span><b>Regimento e</b><small>Convenção cumpridos à risca</small></span></div>
+      <div class="fcard c4"><span class="ic"><i data-lucide="wrench"></i></span><span><b>Manutenção</b><small>Cronograma executável</small></span></div>
       <div class="fcard c5"><span class="ic"><i data-lucide="banknote"></i></span><span><b>Finanças</b><small>Respeito a cada centavo</small></span></div>
     </div>
   </div>
