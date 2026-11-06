@@ -474,6 +474,62 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
   .js .reveal{opacity:1;transform:none}
 }
+/* ===== RODAPÉ — NAVEGAÇÃO EM 2 SUBCOLUNAS ===== */
+/* O <div> que envolve os <details> vira grid de 2 colunas */
+.f-grid > div:has(> .f-col){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-content: start;
+}
+/* O <h5>Navegação</h5> ocupa a linha inteira */
+.f-grid > div:has(> .f-col) > h5{
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+.f-col{ margin-top: 0; }
+.f-col summary{
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: var(--cyan, #4cc2f0);
+  list-style: none;
+  padding: 4px 0;
+}
+.f-col summary::-webkit-details-marker{ display: none; }
+.f-col summary::after{
+  content: "+";
+  float: right;
+  transition: transform .2s ease;
+  color: var(--cyan, #4cc2f0);
+}
+.f-col[open] summary::after{ content: "–"; }
+.f-col ul{ margin: 8px 0 0; padding: 0; }
+.f-col a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Desktop: sempre aberto, summary vira título fixo */
+@media (min-width: 768px){
+  .f-col summary{ pointer-events: none; }
+  .f-col summary::after{ display: none; }
+  .f-col:not([open]) ul{ display: block; }
+}
+
+/* Mobile: 1 coluna + colapsável */
+@media (max-width: 767px){
+  .f-grid > div:has(> .f-col){
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .f-col{ border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 6px; }
+  .f-col[open]{ padding-bottom: 10px; }
+}
+
 </style>
 </head>
 <body>
@@ -988,14 +1044,28 @@ footer ul{list-style:none;display:grid;gap:11px;font-size:.92rem}footer ul a{tra
       </div>
       <div>
         <h5>Navegação</h5>
-        <ul>
-          <li><a href="#metodo"><i data-lucide="chevron-right"></i> Método</a></li>
-          <li><a href="#diferenciais"><i data-lucide="chevron-right"></i> Diferenciais</a></li>
-          <li><a href="#ferramentas"><i data-lucide="chevron-right"></i> Ferramentas</a></li>
-          <li><a href="#para-quem"><i data-lucide="chevron-right"></i> Para quem</a></li>
-          <li><a href="#faq"><i data-lucide="chevron-right"></i> FAQ</a></li>
-          <li><a href="#contato"><i data-lucide="chevron-right"></i> Contato</a></li>
-        </ul>
+
+        <details class="f-col" open>
+          <summary>Jornada</summary>
+          <ul>
+	    <li><a href="#topo"><i data-lucide="chevron-right"></i> Home</a></li>
+            <li><a href="#metodo"><i data-lucide="chevron-right"></i> Método</a></li>
+            <li><a href="#resultados"><i data-lucide="chevron-right"></i> Resultados</a></li>
+            <li><a href="#sobre"><i data-lucide="chevron-right"></i> Sobre</a></li>
+            <li><a href="#diferenciais"><i data-lucide="chevron-right"></i> Diferenciais</a></li>
+          </ul>
+        </details>
+
+        <details class="f-col" open>
+          <summary>Aprofundamento</summary>
+          <ul>
+            <li><a href="#conhecimento"><i data-lucide="chevron-right"></i> Conhecimento</a></li>
+            <li><a href="#ferramentas"><i data-lucide="chevron-right"></i> Ferramentas</a></li>
+            <li><a href="#para-quem"><i data-lucide="chevron-right"></i> Para quem</a></li>
+            <li><a href="#faq"><i data-lucide="chevron-right"></i> FAQ</a></li>
+            <li><a href="#contato"><i data-lucide="chevron-right"></i> Contato</a></li>
+          </ul>
+        </details>
       </div>
       <div>
         <h5>Contato</h5>
